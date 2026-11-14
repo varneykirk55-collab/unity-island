@@ -56,6 +56,10 @@ namespace IslandCombat
         public float SheatheDuration = 0.5f;
         [Tooltip("When during the sheathe the sword moves from the hand to the scabbard.")]
         public float SheatheAttachTime = 0.4f;
+        [Tooltip("With a draw clip: how fast the sword layers fade in at the start of the draw.")]
+        public float LayerFadeIn = 0.12f;
+        [Tooltip("With a sheathe clip: how long before the end the sword layers fade back to locomotion.")]
+        public float SheatheFadeOut = 0.3f;
         public float AttackFadeIn = 0.08f;
         public float RecoveryFade = 0.25f;
         [Tooltip("How quickly the full-body (idle) sword stance fades in/out when starting or stopping movement.")]
@@ -74,6 +78,8 @@ namespace IslandCombat
 
         public SwordState State { get; private set; } = SwordState.Sheathed;
         public int AttackIndex { get; private set; } = -1;
+        bool HasDrawClip => !string.IsNullOrEmpty(DrawState);
+        bool HasSheatheClip => !string.IsNullOrEmpty(SheatheState);
         public bool IsBusy => State == SwordState.Drawing || State == SwordState.Sheathing || State == SwordState.Attacking;
 
         public event Action Drawn, Sheathed;
@@ -204,12 +210,13 @@ namespace IslandCombat
 
                 case SwordState.Drawing:
                     if (!_attached && _stateTime >= DrawAttachTime) Attach(true);
-                    upperTarget = Mathf.Clamp01(_stateTime / Mathf.Max(0.01f, DrawDuration * 0.7f));
+                    // with a draw clip the layers come in almost at once; without one the stance blends in over the draw
+                    upperTarget = HasDrawClip ? Mathf.Clamp01(_stateTime / LayerFadeIn) : Mathf.Clamp01(_stateTime / Mathf.Max(0.01f, DrawDuration * 0.7f));
                     if (_stateTime >= DrawDuration)
                     {
                         if (!_attached) Attach(true);
                         State = SwordState.Equipped; _stateTime = 0f;
-                        if (!string.IsNullOrEmpty(DrawState)) Play(StanceState, 0.15f);
+                        if (HasDrawClip) Play(StanceState, RecoveryFade);
                         Drawn?.Invoke();
                     }
                     break;
@@ -233,7 +240,11 @@ namespace IslandCombat
                 }
 
                 case SwordState.Sheathing:
-                    upperTarget = 1f - Mathf.Clamp01(_stateTime / Mathf.Max(0.01f, SheatheDuration * 0.8f));
+                    // with a sheathe clip the layers stay on until its last moments, then hand back to locomotion
+                    // (full weight until the sword is back in the saya, so the hand is exactly where the clip puts it)
+                    upperTarget = HasSheatheClip
+                        ? (_stateTime < SheatheAttachTime ? 1f : Mathf.Clamp01((SheatheDuration - _stateTime) / Mathf.Max(0.05f, Mathf.Min(SheatheFadeOut, SheatheDuration - SheatheAttachTime))))
+                        : 1f - Mathf.Clamp01(_stateTime / Mathf.Max(0.01f, SheatheDuration * 0.8f));
                     if (_attached && _stateTime >= SheatheAttachTime) Attach(false);
                     if (_stateTime >= SheatheDuration)
                     {

@@ -32,6 +32,10 @@ namespace IslandCombat.Editor
         // clip choices
         const string StanceClip = "battle stance";
         static readonly string[] AttackClips = { "slash1", "slash2", "slash3" };
+        // Owner-supplied Mixamo clips (copied from OneDrive/Documents/Kengeki/assets; git-ignored)
+        const string MixamoDir = Dir + "Mixamo/";
+        const string DrawFbx = MixamoDir + "Withdrawing Sword.fbx";
+        const string SheatheFbx = MixamoDir + "Sheathing Sword.fbx";
 
         // sword fit (local to the bones; tuned against the geometry report + screenshots)
         // Katana mesh: blade tip +Z, tsuka (handle) from z=-0.26 to the tsuba at z~0, blade plane = YZ.
@@ -156,6 +160,8 @@ namespace IslandCombat.Editor
             var empty = sm.AddState("Empty", new Vector3(250, 0));
             sm.defaultState = empty;
             sm.AddState("Stance", new Vector3(250, 80)).motion = Clip(StanceClip);
+            sm.AddState("Draw", new Vector3(0, 80)).motion = MixamoClip(DrawFbx, "Draw");
+            sm.AddState("Sheathe", new Vector3(0, 160)).motion = MixamoClip(SheatheFbx, "Sheathe");
             for (int i = 0; i < AttackClips.Length; i++)
                 sm.AddState("Attack" + (i + 1), new Vector3(500, 80 * i)).motion = Clip(AttackClips[i]);
             foreach (var s in sm.states) s.state.writeDefaultValues = true;
@@ -194,8 +200,9 @@ namespace IslandCombat.Editor
                 foreach (var t in player.GetComponentsInChildren<Transform>(true).Where(t => t.name == n).ToArray())
                     UnityEngine.Object.DestroyImmediate(t.gameObject);
 
+            var fit = GetFit();
             var handSocket = Child(hand, "SwordHandSocket", GripPos, GripEuler);
-            var sayaMount = Child(hips, "SwordSayaMount", SayaMountPos, SayaMountEuler);
+            var sayaMount = Child(hips, "SwordSayaMount", fit.MountPos, fit.MountRot.eulerAngles);
             var saya = Place(SayaPrefab, sayaMount, "Saya", LitMaterial("M_Saya_Generic01_URP", "tex_saya_generic01", 0.55f));
             var sheathSocket = Child(sayaMount, "SwordSheathSocket", SheathedSwordPos, SheathedSwordEuler);
             var sword = Place(KatanaPrefab, sheathSocket, "Katana", LitMaterial("M_Katana_Generic01_URP", "tex_sword_generic01", 0.85f));
@@ -206,8 +213,107 @@ namespace IslandCombat.Editor
             combat.HandSocket = handSocket;
             combat.SheathSocket = sheathSocket;
             combat.Attacks = AttackClips.Select((c, i) => new SwordCombat.AttackStep { State = "Attack" + (i + 1), Length = Clip(c).length }).ToArray();
+            combat.DrawState = "Draw"; combat.SheatheState = "Sheathe";
+            combat.DrawAttachTime = fit.Grab; combat.DrawDuration = fit.DrawLength * 0.9f;
+            combat.SheatheAttachTime = fit.Release; combat.SheatheDuration = fit.SheatheLength;
             EditorUtility.SetDirty(combat); EditorUtility.SetDirty(audio);
             return combat;
+        }
+
+        // ------------------------------------------------------------------ Mixamo draw / sheathe
+
+        static AnimationClip MixamoClip(string path, string clipName)
+        {
+            var mi = AssetImporter.GetAtPath(path) as ModelImporter ?? throw new Exception("Missing " + path + " (copy it from Kengeki/assets)");
+            if (mi.animationType != ModelImporterAnimationType.Human || mi.avatarSetup != ModelImporterAvatarSetup.CreateFromThisModel)
+            {
+                mi.animationType = ModelImporterAnimationType.Human;
+                mi.avatarSetup = ModelImporterAvatarSetup.CreateFromThisModel;
+                mi.importAnimation = true;
+                mi.SaveAndReimport();
+            }
+            var current = mi.clipAnimations.Length > 0 ? mi.clipAnimations : mi.defaultClipAnimations;
+            var c = current[0];
+            bool same = mi.clipAnimations.Length == 1 && c.name == clipName && !c.loopTime && c.lockRootRotation && c.lockRootHeightY && !c.lockRootPositionXZ && c.keepOriginalPositionY && !c.heightFromFeet;
+            if (!same)
+            {
+                c.name = clipName;
+                c.loopTime = false;                                        // one-shot
+                c.lockRootRotation = true; c.keepOriginalOrientation = true;  // body rotation stays in the pose
+                c.lockRootHeightY = true; c.keepOriginalPositionY = true; c.heightFromFeet = false;
+                c.lockRootPositionXZ = false; c.keepOriginalPositionXZ = false; // XZ travel -> root motion -> discarded (no drift)
+                mi.clipAnimations = new[] { c };
+                mi.SaveAndReimport();
+            }
+            return AssetDatabase.LoadAllAssetsAtPath(path).OfType<AnimationClip>().First(x => !x.name.StartsWith("__preview__"));
+        }
+
+        public struct Fit { public float Grab, Release, DrawLength, SheatheLength, ReleaseGap, ReleaseAngle; public Vector3 MountPos; public Quaternion MountRot; public string Note; }
+        static Fit? _fit;
+        static Fit GetFit() => _fit ?? (_fit = AnalyzeDrawSheathe()).Value;
+
+        /// <summary>
+        /// Samples the draw / sheathe clips on the robot: finds when the right hand is at the hilt (closest to the left
+        /// hip joint), then places the scabbard so the sheathed sword coincides with the hand-held sword at that frame.
+        /// The sword therefore changes parent without a visible jump.
+        /// </summary>
+        static Fit AnalyzeDrawSheathe()
+        {
+            var draw = MixamoClip(DrawFbx, "Draw");
+            var sheathe = MixamoClip(SheatheFbx, "Sheathe");
+            var go = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath<GameObject>(ArmaturePrefab));
+            var fit = new Fit { DrawLength = draw.length, SheatheLength = sheathe.length };
+            try
+            {
+                go.transform.SetPositionAndRotation(Vector3.zero, Quaternion.identity);
+                var an = go.GetComponent<Animator>();
+                Transform hips = an.GetBoneTransform(HumanBodyBones.Hips), hand = an.GetBoneTransform(HumanBodyBones.RightHand), lhip = an.GetBoneTransform(HumanBodyBones.LeftUpperLeg);
+                var grip = Matrix4x4.TRS(GripPos, Quaternion.Euler(GripEuler), Vector3.one);
+                var tsuka = new Vector3(0, 0, -0.13f);
+                AnimationMode.StartAnimationMode();
+                void Sample(AnimationClip c, float t) { AnimationMode.BeginSampling(); AnimationMode.SampleAnimationClip(go, c, t); AnimationMode.EndSampling(); }
+                Matrix4x4 Socket() => hand.localToWorldMatrix * grip;
+
+                // draw: hand at the hilt = right-hand tsuka point closest to the left hip joint in the first 60 %
+                float best = float.MaxValue;
+                for (float t = 0; t <= draw.length * 0.6f; t += 1f / 60f)
+                {
+                    Sample(draw, t);
+                    float d = Vector3.Distance(Socket().MultiplyPoint3x4(tsuka), lhip.position);
+                    if (d < best) { best = d; fit.Grab = t; }
+                }
+                Sample(draw, fit.Grab);
+                var s = Socket();
+                var sockRot = s.rotation; var sockPos = (Vector3)s.GetColumn(3);
+                var pos = hips.InverseTransformPoint(sockPos);
+                var rot = Quaternion.Inverse(hips.rotation) * sockRot;
+                var fwd = rot * Vector3.forward;   // blade direction in hips space
+                bool plausible = pos.x < 0.05f && pos.magnitude < 0.5f && fwd.z < -0.2f && fwd.y < 0.5f;
+                if (plausible) { fit.MountPos = pos; fit.MountRot = rot; fit.Note = "scabbard aligned to the hand pose at the grab frame"; }
+                else
+                {   // keep the worn-katana orientation, but put the hilt where the hand grabs
+                    fit.MountRot = Quaternion.Euler(SayaMountEuler);
+                    fit.MountPos = hips.InverseTransformPoint(s.MultiplyPoint3x4(tsuka)) - fit.MountRot * tsuka;
+                    fit.Note = $"grab pose implausible for a hip scabbard (blade dir {fwd:F2}, pos {pos:F2}); default orientation, hilt at grab point";
+                }
+
+                // sheathe: release when the hand-held sword best matches the sheathed sword, in the last 70 %
+                best = float.MaxValue;
+                for (float t = sheathe.length * 0.3f; t <= sheathe.length; t += 1f / 60f)
+                {
+                    Sample(sheathe, t);
+                    var mount = hips.localToWorldMatrix * Matrix4x4.TRS(fit.MountPos, fit.MountRot, Vector3.one);
+                    var h = Socket();
+                    float d = Vector3.Distance(h.MultiplyPoint3x4(tsuka), mount.MultiplyPoint3x4(tsuka))
+                            + 0.3f * Vector3.Distance(h.MultiplyPoint3x4(new Vector3(0, 0, 0.6f)), mount.MultiplyPoint3x4(new Vector3(0, 0, 0.6f)));
+                    if (d < best) { best = d; fit.Release = t; fit.ReleaseGap = Vector3.Distance(h.MultiplyPoint3x4(tsuka), mount.MultiplyPoint3x4(tsuka)); fit.ReleaseAngle = Quaternion.Angle(h.rotation, mount.rotation); }
+                }
+            }
+            finally { AnimationMode.StopAnimationMode(); UnityEngine.Object.DestroyImmediate(go); }
+            var msg = $"[SwordSetup] draw {fit.DrawLength:0.00}s grab@{fit.Grab:0.00}s; sheathe {fit.SheatheLength:0.00}s release@{fit.Release:0.00}s (hilt gap {fit.ReleaseGap:0.000} m, {fit.ReleaseAngle:0}°); mount {fit.MountPos:F3} {fit.MountRot.eulerAngles:F0}: {fit.Note}";
+            Debug.Log(msg);
+            Directory.CreateDirectory("_Backups/sword"); File.WriteAllText("_Backups/sword/draw_sheathe_fit.txt", msg);
+            return fit;
         }
 
         static Transform Child(Transform parent, string name, Vector3 pos, Vector3 euler)

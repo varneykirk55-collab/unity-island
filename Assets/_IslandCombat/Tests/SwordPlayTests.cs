@@ -23,7 +23,7 @@ namespace IslandCombat.Tests
 
         GameObject player; CharacterController cc; StarterAssetsInputs input; ThirdPersonController tpc;
         SwordCombat sword; Animator anim; Camera cam, shotCam; Transform hand, hips;
-        readonly StringBuilder log = new StringBuilder();
+        readonly StringBuilder log = new StringBuilder(), trace = new StringBuilder();
         readonly List<string> errors = new List<string>();
         int fails;
 
@@ -55,6 +55,35 @@ namespace IslandCombat.Tests
         string shotPrefix = "";
 
         float Flat(Vector3 a, Vector3 b) { a.y = 0; b.y = 0; return Vector3.Distance(a, b); }
+        string Layers()
+        {
+            var sb = new StringBuilder();
+            for (int l = 0; l < anim.layerCount; l++)
+            {
+                var cur = anim.GetCurrentAnimatorStateInfo(l);
+                string name = "?"; foreach (var n in new[] { "Empty", "Stance", "Draw", "Sheathe", "Attack1", "Attack2", "Attack3", "Idle Walk Run Blend", "JumpStart", "InAir", "JumpLand" }) if (cur.IsName(n)) name = n;
+                sb.Append($"[{anim.GetLayerName(l)} w{anim.GetLayerWeight(l):0.00} {name}@{cur.normalizedTime:0.000}{(anim.IsInTransition(l) ? " ->next@" + anim.GetNextAnimatorStateInfo(l).normalizedTime.ToString("0.000") : "")}] ");
+            }
+            return sb.ToString();
+        }
+
+        // On the frame the sword changes parent both sockets come from the same pose, so their difference is the visible snap.
+        float HandOffGap()
+        {
+            var tsuka = new Vector3(0, 0, -0.13f); var tip = new Vector3(0, 0, 0.6f);
+            Vector3 P(Transform s, Vector3 p) => s.TransformPoint(p);
+            return Mathf.Max(Vector3.Distance(P(sword.HandSocket, tsuka), P(sword.SheathSocket, tsuka)), 0.5f * Vector3.Distance(P(sword.HandSocket, tip), P(sword.SheathSocket, tip)));
+        }
+
+        void LogHandOff(float t)
+        {
+            var tsuka = new Vector3(0, 0, -0.13f);
+            log.AppendLine($"   hand-off to {sword.Sword.parent.name} at t={t:0.000}s: hilt gap {Vector3.Distance(sword.HandSocket.TransformPoint(tsuka), sword.SheathSocket.TransformPoint(tsuka)):0.000} m, " +
+                $"angle {Quaternion.Angle(sword.HandSocket.rotation, sword.SheathSocket.rotation):0}° | {Layers()}");
+        }
+
+        // middle of the sword's handle, in player space
+        Vector3 Tsuka() => player.transform.InverseTransformPoint(sword.Sword.TransformPoint(new Vector3(0, 0, -0.13f)));
 
         /// <summary>Fast, low-memory run in a flat scene with the identical player + sword setup.</summary>
         [UnityTest, Timeout(600000)]
@@ -116,9 +145,16 @@ namespace IslandCombat.Tests
 
                 // ---- 4 draw (+ spam)
                 Check(sword.ToggleSword(), "4. draw accepted");
-                int spamAccepted = 0; float t = 0;
-                while (sword.State == SwordCombat.SwordState.Drawing && t < 2f) { if (sword.ToggleSword()) spamAccepted++; if (sword.Attack()) spamAccepted++; yield return null; t += Time.deltaTime; }
+                int spamAccepted = 0; float t = 0; float maxSwordJump = 0; var lastParent = sword.Sword.parent; var drawShots = new HashSet<int>();
+                while (sword.State == SwordCombat.SwordState.Drawing && t < 6f)
+                {
+                    if (sword.ToggleSword()) spamAccepted++; if (sword.Attack()) spamAccepted++;
+                    yield return null; t += Time.deltaTime;
+                    if (sword.Sword.parent != lastParent) { maxSwordJump = Mathf.Max(maxSwordJump, HandOffGap()); lastParent = sword.Sword.parent; LogHandOff(t); }
+                    for (int k = 0; k < 3; k++) { float at = sword.DrawAttachTime + (k - 1) * 0.25f; if (!drawShots.Contains(k) && t >= at) { drawShots.Add(k); Shot("02e_draw_" + k); } }
+                }
                 Check(spamAccepted == 0, $"draw cannot be interrupted by spammed draw/sheathe/attack ({spamAccepted} accepted)");
+                Check(maxSwordJump < 0.12f, $"sword does not visibly jump when it leaves the saya (hand-off gap {maxSwordJump:0.000} m)");
                 Check(sword.State == SwordCombat.SwordState.Equipped, $"4. draw completes into equipped stance ({t:0.00}s)");
                 Check(sword.Sword.parent == sword.HandSocket, "4. sword moved to the right-hand socket");
                 yield return Frames(0.6f);
@@ -130,7 +166,7 @@ namespace IslandCombat.Tests
                 // ---- 6/7/9 attacks with spammed input, no root drift
                 var rootBefore = player.transform.position; float maxHipJump = 0; Vector3 lastHip = player.transform.InverseTransformPoint(hips.position);
                 Check(sword.Attack(), "6. attack accepted when equipped");
-                int maxIndex = 0, stepsSeen = 0, lastIdx = -1; t = 0; var shots = new HashSet<int>();
+                int maxIndex = 0, stepsSeen = 0, lastIdx = -1; t = 0; var shots = new HashSet<int>(); float prevDt = 1f;
                 while (sword.State == SwordCombat.SwordState.Attacking && t < 6f)
                 {
                     for (int k = 0; k < 5; k++) sword.Attack();      // hammer the button
@@ -138,9 +174,15 @@ namespace IslandCombat.Tests
                     maxIndex = Mathf.Max(maxIndex, sword.AttackIndex);
                     yield return null; t += Time.deltaTime;
                     var hp = player.transform.InverseTransformPoint(hips.position); float jump = (hp - lastHip).magnitude;
-                    if (jump > 0.12f) log.AppendLine($"   hip jump {jump:0.000} m at t={t:0.000}s frame {Time.frameCount} attack {sword.AttackIndex} state {sword.State} from {lastHip:F3} to {hp:F3}, " +
-                        $"upper w {anim.GetLayerWeight(anim.GetLayerIndex("Sword Upper")):0.00} lower w {anim.GetLayerWeight(anim.GetLayerIndex("Sword Lower")):0.00}, inTransition {anim.IsInTransition(anim.GetLayerIndex("Sword Lower"))}");
-                    maxHipJump = Mathf.Max(maxHipJump, jump); lastHip = hp;
+                    if (sword.AttackIndex == 0 && t < 0.4f && (Time.frameCount % 15 == 0 || jump > 0.05f))
+                    {
+                        var li = anim.GetLayerIndex("Sword Lower"); var cs = anim.GetCurrentAnimatorStateInfo(li);
+                        trace.AppendLine($"     trace t={t:0.000} hipY={hp.y:0.000} lower {(cs.IsName("Attack1") ? "Attack1" : cs.IsName("Stance") ? "Stance" : "?")}@{cs.normalizedTime * cs.length:0.000}s len {cs.length:0.000} trans {anim.IsInTransition(li)} w {anim.GetLayerWeight(li):0.00}");
+                    }
+                    if (jump > 0.08f) log.AppendLine($"   hip jump {jump:0.000} m at t={t:0.000}s dt={Time.deltaTime:0.0000} frame {Time.frameCount} attack {sword.AttackIndex} state {sword.State} from {lastHip:F3} to {hp:F3} | {Layers()}");
+                    // a screenshot stalls one frame (~0.3 s of animation) and the pose lands a frame later: skip both frames
+                    if (Time.deltaTime < 0.02f && prevDt < 0.02f) maxHipJump = Mathf.Max(maxHipJump, jump);
+                    prevDt = Time.deltaTime; lastHip = hp;
                     if (t > 0.3f + 0.6f * shots.Count && shots.Count < 3) { Shot("03_attack_" + shots.Count); shots.Add(shots.Count); }
                 }
                 Check(stepsSeen == sword.Attacks.Length, $"6. buffered combo plays all {sword.Attacks.Length} steps once under spam (saw {stepsSeen})");
@@ -148,6 +190,7 @@ namespace IslandCombat.Tests
                 float drift = Flat(rootBefore, player.transform.position);
                 Check(drift < 0.05f, $"9. no root drift/teleport during attacks ({drift:0.000} m)");
                 Check(maxHipJump < 0.12f, $"9. no severe pose snapping (max hip jump per frame {maxHipJump:0.000} m)");
+                log.Append(trace);
                 yield return Frames(0.4f);
                 Shot("04_recovered_stance");
 
@@ -172,9 +215,16 @@ namespace IslandCombat.Tests
 
                 // ---- 5 sheathe (+ spam)
                 Check(sword.ToggleSword(), "5. sheathe accepted");
-                spamAccepted = 0; t = 0;
-                while (sword.State == SwordCombat.SwordState.Sheathing && t < 2f) { if (sword.ToggleSword()) spamAccepted++; if (sword.Attack()) spamAccepted++; yield return null; t += Time.deltaTime; }
+                spamAccepted = 0; t = 0; maxSwordJump = 0; lastParent = sword.Sword.parent; var sheatheShots = new HashSet<int>();
+                while (sword.State == SwordCombat.SwordState.Sheathing && t < 6f)
+                {
+                    if (sword.ToggleSword()) spamAccepted++; if (sword.Attack()) spamAccepted++;
+                    yield return null; t += Time.deltaTime;
+                    if (sword.Sword.parent != lastParent) { maxSwordJump = Mathf.Max(maxSwordJump, HandOffGap()); lastParent = sword.Sword.parent; LogHandOff(t); }
+                    for (int k = 0; k < 3; k++) { float at = sword.SheatheAttachTime + (k - 1) * 0.3f; if (!sheatheShots.Contains(k) && t >= at) { sheatheShots.Add(k); Shot("07e_sheathe_" + k); } }
+                }
                 Check(spamAccepted == 0, $"sheathe cannot be interrupted ({spamAccepted} accepted)");
+                Check(maxSwordJump < 0.12f, $"sword does not visibly jump when it returns to the saya (hand-off gap {maxSwordJump:0.000} m)");
                 Check(sword.State == SwordCombat.SwordState.Sheathed && sword.Sword.parent == sword.SheathSocket, $"5. sheathe completes, sword back in saya ({t:0.00}s)");
                 Check(!sword.Attack(), "attack ignored while sheathed");
                 yield return Frames(0.5f);
