@@ -1,0 +1,72 @@
+# Unity generated
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+/_Backups/
+
+# IDE / generated project files
+.vs/
+.vscode/
+.idea/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# Builds / crash
+*.apk
+*.aab
+*.unitypackage
+*.app
+sysinfo.txt
+crashlytics-build.properties
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test runner temp scenes
+/Assets/InitTestScene*.unity
+/Assets/InitTestScene*.unity.meta
+
+# Third-party Asset Store packs (re-import from the Asset Store / package manager)
+/Assets/Bitgem/
+/Assets/Bitgem.meta
+/Assets/Bugchonmunhwa/
+/Assets/Bugchonmunhwa.meta
+/Assets/DongGungComplex/
+/Assets/DongGungComplex.meta
+/Assets/Free Island Collection/
+/Assets/Free Island Collection.meta
+/Assets/GeoncheonggungComplex/
+/Assets/GeoncheonggungComplex.meta
+/Assets/Japanese Garden Pack/
+/Assets/Japanese Garden Pack.meta
+/Assets/JTS_PagodaArchitecture/
+/Assets/JTS_PagodaArchitecture.meta
+/Assets/JTS_Shrine_Torii_Gates/
+/Assets/JTS_Shrine_Torii_Gates.meta
+/Assets/JTS_StoneLanterns/
+/Assets/JTS_StoneLanterns.meta
+/Assets/SUIMONO - WATER SYSTEM 2/
+/Assets/SUIMONO - WATER SYSTEM 2.meta
+/Assets/Waldemarst/
+/Assets/Waldemarst.meta

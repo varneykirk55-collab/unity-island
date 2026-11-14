@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2927364348149164956
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 265520981213042253, guid: 96be72b55b9754c499f597f8e1d1be2d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 265520981213042253, guid: 96be72b55b9754c499f597f8e1d1be2d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 265520981213042253, guid: 96be72b55b9754c499f597f8e1d1be2d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 265520981213042253, guid: 96be72b55b9754c499f597f8e1d1be2d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 265520981213042253, guid: 96be72b55b9754c499f597f8e1d1be2d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 265520981213042253, guid: 96be72b55b9754c499f597f8e1d1be2d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 265520981213042253, guid: 96be72b55b9754c499f597f8e1d1be2d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 265520981213042253, guid: 96be72b55b9754c499f597f8e1d1be2d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 265520981213042253, guid: 96be72b55b9754c499f597f8e1d1be2d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 265520981213042253, guid: 96be72b55b9754c499f597f8e1d1be2d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7984470445253057331, guid: 96be72b55b9754c499f597f8e1d1be2d, type: 3}
+      propertyPath: m_Name
+      value: Tree_BlackPine_Mid_Green_03_Collider
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7984470445253057331, guid: 96be72b55b9754c499f597f8e1d1be2d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3941948588456736141}
+  m_SourcePrefab: {fileID: 100100000, guid: 96be72b55b9754c499f597f8e1d1be2d, type: 3}
+--- !u!1 &5075169530284290223 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7984470445253057331, guid: 96be72b55b9754c499f597f8e1d1be2d, type: 3}
+  m_PrefabInstance: {fileID: 2927364348149164956}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &3941948588456736141
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5075169530284290223}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.23225011
+  m_Height: 2.8018675
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.9910612, z: 0}
