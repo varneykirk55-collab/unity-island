@@ -1,0 +1,13 @@
+{
+    "name": "IslandTools.Mapping.Editor",
+    "rootNamespace": "IslandTools.Mapping.Editor",
+    "references": [ "IslandTools.Mapping" ],
+    "includePlatforms": [ "Editor" ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

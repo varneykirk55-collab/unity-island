@@ -1,0 +1,13 @@
+{
+    "name": "IslandTools.Mapping",
+    "rootNamespace": "IslandTools.Mapping",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
