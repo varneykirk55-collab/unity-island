@@ -1,0 +1,41 @@
+Island map generator v1  scene Assets/Free Island Collection/Scenes/Scene 1.unity  started 2026-11-15 00:46:21 UTC
+Scene opened read-only (54s). It is never saved.
+Terrain 'Terrain' data 'Terrain 1' at (0.00, 0.00, 0.00) size (2500.00, 650.00, 2500.00) heightmap 2049 layers [Sand, Dirt_2, Mossy_Rock, Dirt_1, Grass_1, Grass_2, Cliff_1, Cliff_2] trees 27099
+Mapped area = terrain bounds: X 0..2500, Z 0..2500 (2500 x 2500 m) -> 4096 x 4096 px, 0.6104 m/px
+Height (world Y): 17.52 .. 408.13 m
+Water object 'Island_Environment/Ocean' y=45.00 bounds X -4750..7250 Z -4750..7250 (covers whole map)
+Sea level Y 45.00 from 'Island_Environment/Ocean'
+Feature 1: Bay_Shore (39 objects) [Bay_Shore] centre X 1512.8 Z 1828.0 Y 44.9, footprint X 1363..1662 Z 1600..2056, top Y 49, cell G3
+Feature 2: Garden (89 objects) [Garden] centre X 456.5 Z 1885.7 Y 106.1, footprint X 431..482 Z 1857..1915, top Y 115, cell B3
+Feature 3: Goju_Approach (25 objects) [Goju_Approach] centre X 989.5 Z 1488.2 Y 220.3, footprint X 919..1060 Z 1433..1543, top Y 232, cell D5
+Feature 4: KR_Donggung_Court_01 [Korean_Buildings] centre X 2254.3 Z 814.3 Y 95.5, footprint X 2233..2275 Z 782..846, top Y 104, cell J7
+Feature 5: KR_Donggung_Court_02 [Korean_Buildings] centre X 575.3 Z 1115.3 Y 142.0, footprint X 538..611 Z 1088..1150, top Y 153, cell C6
+Feature 6: KR_Donggung_Court_03 [Korean_Buildings] centre X 1788.8 Z 2016.8 Y 46.4, footprint X 1756..1827 Z 1983..2055, top Y 52, cell H2
+Feature 7: KR_Donggung_Court_04 [Korean_Buildings] centre X 2119.7 Z 799.7 Y 107.9, footprint X 2084..2155 Z 771..828, top Y 114, cell I7
+Feature 8: KR_Donggung_EastHall [Korean_Buildings] centre X 417.0 Z 1257.0 Y 113.7, footprint X 393..441 Z 1233..1280, top Y 124, cell B5
+Feature 9: KR_Geoncheonggung_Palace [Korean_Buildings] centre X 1211.2 Z 2279.2 Y 51.5, footprint X 1178..1244 Z 2240..2318, top Y 63, cell E1
+Feature 10: KR_Gyedong_House [Korean_Buildings] centre X 500.4 Z 2000.4 Y 98.3, footprint X 481..525 Z 1980..2014, top Y 103, cell C2
+Feature 11: Pagoda_Goju_Main (site 2) [Landmarks] centre X 1066.0 Z 1430.0 Y 227.2, footprint X 1059..1073 Z 1423..1437, top Y 263, cell E5
+Feature 12: Pagoda_Sanju_South (site 3) [Landmarks] centre X 1572.0 Z 602.0 Y 191.7, footprint X 1569..1576 Z 599..605, top Y 207, cell G8
+Feature 13: Sanju_Shrine (6 objects) [Sanju_Shrine] centre X 1581.8 Z 588.7 Y 190.6, footprint X 1570..1593 Z 581..597, top Y 203, cell G8
+Feature 14: PlayerArmature [Player start (spawn)] centre X 917.6 Z 1543.8 Y 225.3, footprint X 917..918 Z 1543..1544, top Y 227, cell D4
+Terrain trees: 27099
+Water: ocean 2.401 km², land 3.849 km², inland basins below sea level: 0 (0 m²)
+Spot heights: Y 407.2 at X 1407 Z 1045 (F6); Y 285.7 at X 889 Z 1347 (D5); Y 180.8 at X 791 Z 1924 (D3); Y 157.0 at X 1973 Z 1494 (H5); Y 140.4 at X 1172 Z 2041 (E2)
+Render done (224s)
+Images written (264s)
+Finished in 287s
+
+VALIDATION
+camera-vs-formula: max difference between Camera.WorldToViewportPoint and MapProjection.WorldToPixel over 1024 random points = 0.0004 px (PASS)
+marker world X 342.5 Z 2152.5: expected px (561.2, 569.3) found (561.5, 569.5) error 0.38 px = 0.23 m  [1 tile(s), 169 px, expected ~172 px]
+marker world X 1250.0 Z 1250.0: expected px (2048.0, 2048.0) found (2048.0, 2048.0) error 0.00 px = 0.00 m  [4 tile(s), 196 px, expected ~172 px]
+marker world X 2182.5 Z 322.5: expected px (3575.8, 3567.6) found (3575.5, 3567.5) error 0.33 px = 0.20 m  [1 tile(s), 169 px, expected ~172 px]
+marker world X 2280.0 Z 2257.5: expected px (3735.6, 397.3) found (3735.5, 397.5) error 0.20 px = 0.12 m  [1 tile(s), 169 px, expected ~172 px]
+marker world X 202.5 Z 185.0: expected px (331.8, 3792.9) found (331.5, 3792.5) error 0.48 px = 0.29 m  [1 tile(s), 169 px, expected ~172 px]
+marker world X 832.5 Z 1545.0: expected px (1364.0, 1564.7) found (1364.0, 1564.5) error 0.18 px = 0.11 m  [1 tile(s), 182 px, expected ~172 px]
+PASS end-to-end alignment: worst marker error 0.48 px (0.29 m), threshold 1 px
+PASS world->pixel->world round trip: max error 0.00012 m over 2000 points
+PASS corners: NW world corner -> px (0.00, 0.00), SE world corner -> px (4096.00, 4096.00)
+INFO stored height grid (513^2, 4.88 m spacing) vs live terrain: mean error 0.04 m, max 0.60 m (largest on cliffs)
+PASS 14/14 existing features lie inside the mapped area

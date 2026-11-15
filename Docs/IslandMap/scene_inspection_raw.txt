@@ -1,0 +1,286 @@
+==================== Assets/Free Island Collection/Scenes/Scene 1.unity
+  roots: Directional Light, Main Camera, Reflection Probe, Terrain, Island_Environment, Player_Setup
+  TERRAIN 'Terrain' data 'Terrain 1' (Assets/Free Island Collection/Environment/Terrain/Terrains/Terrain 1.asset)
+    position (0.00, 0.00, 0.00)  rotation (0.0, 0.0, 0.0)  scale (1.00, 1.00, 1.00)
+    size (2500.0, 650.0, 2500.0) (X x heightScale x Z)  heightmap 2049  alphamap 2048  basemap 1024  detail 2048
+    world X 0.0..2500.0  Z 0.0..2500.0  height 17.52..408.16 m (mean 94.96)
+    fraction above y=0: 100.0 %
+    fraction above y=45: 61.5 %
+    layers: 0:layer_Sand_DiffuseSand_Normal2023054508611406[Sand_Diffuse tile 5], 1:layer_Dirt_2_DiffuseDirt_2_Normal2023054508611406[Dirt_2_Diffuse tile 5], 2:layer_Mossy_Rock_DiffuseMossy_Rock_Normal2023054508611406[Mossy_Rock_Diffuse tile 5], 3:layer_Dirt_1_DiffuseDirt_1_Normal2023054508611406[Dirt_1_Diffuse tile 5], 4:layer_Grass_1_DiffuseGrass_1_Normal2023054508611406[Grass_1_Diffuse tile 5], 5:layer_Grass_2_DiffuseGrass_2_Normal2023054508611406[Grass_2_Diffuse tile 5], 6:layer_Cliff_1_DiffuseCliff_1_Normaleda51f90c7f37482[Cliff_1_Diffuse tile 150], 7:layer_Cliff_2_DiffuseCliff_2_Normaleda51f90c7f37482[Cliff_2_Diffuse tile 150]
+    layer coverage: 0:45.5 %, 1:1.2 %, 2:13.3 %, 3:6.7 %, 4:11.8 %, 5:7.1 %, 6:11.5 %, 7:2.8 %
+    trees: 27099 instances, prototypes: 0:Tree_BlackPine_Big_Green_01_Collider=2177, 1:Tree_BlackPine_Big_Green_02_Collider=2265, 2:Tree_BlackPine_Big_Green_03_Collider=2315, 3:Tree_BlackPine_Mid_Green_01_Collider=4487, 4:Tree_BlackPine_Mid_Green_02_Collider=4472, 5:Tree_BlackPine_Mid_Green_03_Collider=4568, 6:Tree_BlackPine_Small_Green_01_Collider=2331, 7:Tree_BlackPine_Small_Green_02_Collider=2320, 8:Tree_BlackPine_Big_Dry_01_Collider=417, 9:Tree_BlackPine_Mid_Dry_02_Collider=397, 10:Tree_BlackPine_Small_Dry_03_Collider=383, 11:Tree_Bamboo_Big_Green_01_Collider=166, 12:Tree_Bamboo_Big_Green_02_Collider=161, 13:Tree_Bamboo_Mid_Green_01_Collider=287, 14:Tree_Bamboo_Mid_Green_02_Collider=190, 15:Tree_Bamboo_Mid_Dry_01_Collider=163
+    detail prototypes: 0:Grass_A, 1:Grass_B
+      detail 0: total density 1513419
+      detail 1: total density 11123148
+    drawTreesAndFoliage True treeDistance 5000 basemapDistance 2000 material TerrainLit/Universal Render Pipeline/Terrain/Lit
+  ROOT Directional Light pos (584.8, 262.1, 25.6) children 0 renderers 0  no renderers  comps [Light]
+  ROOT Main Camera pos (914.5, 227.2, 1546.3) children 0 renderers 0  no renderers  comps [Camera,FlareLayer,AudioListener,CinemachineBrain]
+  ROOT Reflection Probe pos (1250.0, 0.0, 1250.0) children 0 renderers 0  no renderers  comps [ReflectionProbe]
+  ROOT Island_Environment pos (0.0, 0.0, 0.0) children 8 renderers 15261  bounds X -4750..7250 Y 35..263 Z -4750..7250  comps []
+    GROUP Landmarks pos (0.0, 0.0, 0.0) children 2 renderers 96  bounds X 1059..1576 Y 192..263 Z 599..1437  []
+      Pagoda_Goju_Main (site 2)  pos (1066.0, 227.2, 1430.0) rotY 0  bounds X 1059..1073 Y 227..263 Z 1423..1437  src Assets/JTS_PagodaArchitecture/Prefabs_LOD/Pagoda_Goju_36m_LOD.prefab
+      Pagoda_Sanju_South (site 3)  pos (1572.0, 191.7, 602.0) rotY 180  bounds X 1569..1576 Y 192..207 Z 599..605  src Assets/JTS_PagodaArchitecture/Prefabs_LOD/Pagoda_Sanju_13m_LOD.prefab
+    GROUP Ocean pos (1250.0, 45.0, 1250.0) children 0 renderers 1  bounds X -4750..7250 Y 35..55 Z -4750..7250  [MeshFilter,MeshRenderer]
+    GROUP WindZone pos (0.0, 0.0, 0.0) children 0 renderers 0    [WindZone]
+    GROUP Goju_Approach pos (0.0, 0.0, 0.0) children 25 renderers 47  bounds X 919..1060 Y 220..232 Z 1433..1543  []
+      Torii_Inari_Med1_LOD  pos (1047.0, 228.0, 1444.6) rotY 308  bounds X 1045..1049 Y 227..232 Z 1443..1447  src Assets/JTS_Shrine_Torii_Gates/Prefabs/Torii_Inari_Med1_LOD.prefab
+      Torii_Inari_Med1_LOD  pos (1034.3, 227.4, 1454.4) rotY 308  bounds X 1033..1036 Y 226..231 Z 1452..1456  src Assets/JTS_Shrine_Torii_Gates/Prefabs/Torii_Inari_Med1_LOD.prefab
+      Torii_Inari_Med1_LOD  pos (1021.6, 227.4, 1464.1) rotY 308  bounds X 1020..1023 Y 226..231 Z 1462..1466  src Assets/JTS_Shrine_Torii_Gates/Prefabs/Torii_Inari_Med1_LOD.prefab
+      Lantern_Stone_A1  pos (1042.0, 226.4, 1451.2) rotY 308  bounds X 1042..1042 Y 226..228 Z 1451..1452  src Assets/JTS_StoneLanterns/Prefabs/Lantern_Stone_A1.prefab
+      Lantern_Stone_A1  pos (1039.3, 226.4, 1447.7) rotY 308  bounds X 1039..1040 Y 226..228 Z 1447..1448  src Assets/JTS_StoneLanterns/Prefabs/Lantern_Stone_A1.prefab
+      Torii_Inari_Med1_LOD  pos (1008.9, 226.3, 1473.8) rotY 308  bounds X 1007..1011 Y 225..230 Z 1472..1476  src Assets/JTS_Shrine_Torii_Gates/Prefabs/Torii_Inari_Med1_LOD.prefab
+      Torii_Inari_Med1_LOD  pos (996.2, 227.3, 1483.6) rotY 308  bounds X 995..998 Y 226..231 Z 1482..1486  src Assets/JTS_Shrine_Torii_Gates/Prefabs/Torii_Inari_Med1_LOD.prefab
+      Torii_Inari_Med1_LOD  pos (983.5, 224.6, 1493.3) rotY 308  bounds X 982..985 Y 223..229 Z 1491..1495  src Assets/JTS_Shrine_Torii_Gates/Prefabs/Torii_Inari_Med1_LOD.prefab
+      Torii_Inari_Med1_LOD  pos (970.8, 221.6, 1503.1) rotY 308  bounds X 969..972 Y 220..226 Z 1501..1505  src Assets/JTS_Shrine_Torii_Gates/Prefabs/Torii_Inari_Med1_LOD.prefab
+      Lantern_Stone_A2  pos (1013.9, 225.7, 1467.2) rotY 308  bounds X 1014..1014 Y 226..227 Z 1467..1467  src Assets/JTS_StoneLanterns/Prefabs/Lantern_Stone_A2.prefab
+      Lantern_Stone_A2  pos (1016.6, 225.7, 1470.7) rotY 308  bounds X 1016..1017 Y 226..227 Z 1470..1471  src Assets/JTS_StoneLanterns/Prefabs/Lantern_Stone_A2.prefab
+      Torii_Inari_Med1_LOD  pos (958.1, 221.8, 1512.8) rotY 308  bounds X 956..960 Y 221..226 Z 1511..1515  src Assets/JTS_Shrine_Torii_Gates/Prefabs/Torii_Inari_Med1_LOD.prefab
+      Torii_Inari_Med1_LOD  pos (945.4, 222.5, 1522.5) rotY 308  bounds X 944..947 Y 221..226 Z 1521..1525  src Assets/JTS_Shrine_Torii_Gates/Prefabs/Torii_Inari_Med1_LOD.prefab
+      Torii_Inari_Med1_LOD  pos (932.7, 223.4, 1532.3) rotY 308  bounds X 931..934 Y 222..227 Z 1530..1534  src Assets/JTS_Shrine_Torii_Gates/Prefabs/Torii_Inari_Med1_LOD.prefab
+      Torii_Inari_Med1_LOD  pos (920.8, 224.8, 1541.4) rotY 308  bounds X 919..922 Y 224..229 Z 1539..1543  src Assets/JTS_Shrine_Torii_Gates/Prefabs/Torii_Inari_Med1_LOD.prefab
+      Lantern_Stone_A3  pos (988.5, 225.3, 1486.7) rotY 308  bounds X 988..989 Y 225..226 Z 1487..1487  src Assets/JTS_StoneLanterns/Prefabs/Lantern_Stone_A3.prefab
+      Lantern_Stone_A3  pos (991.2, 225.3, 1490.2) rotY 308  bounds X 991..991 Y 225..226 Z 1490..1490  src Assets/JTS_StoneLanterns/Prefabs/Lantern_Stone_A3.prefab
+      Lantern_Stone_A1  pos (963.1, 220.4, 1506.2) rotY 308  bounds X 963..964 Y 220..222 Z 1506..1507  src Assets/JTS_StoneLanterns/Prefabs/Lantern_Stone_A1.prefab
+      Lantern_Stone_A1  pos (965.8, 220.3, 1509.7) rotY 308  bounds X 965..966 Y 220..222 Z 1509..1510  src Assets/JTS_StoneLanterns/Prefabs/Lantern_Stone_A1.prefab
+      Lantern_Stone_A2  pos (937.7, 221.9, 1525.7) rotY 308  bounds X 937..938 Y 222..223 Z 1525..1526  src Assets/JTS_StoneLanterns/Prefabs/Lantern_Stone_A2.prefab
+      Lantern_Stone_A2  pos (940.4, 221.9, 1529.1) rotY 308  bounds X 940..941 Y 222..223 Z 1529..1529  src Assets/JTS_StoneLanterns/Prefabs/Lantern_Stone_A2.prefab
+      Platform_Stone_A1  pos (1057.5, 227.5, 1441.9) rotY 308  bounds X 1055..1060 Y 227..228 Z 1440..1444  src Assets/JTS_StoneLanterns/Prefabs/Platform_Stone_A1.prefab
+      Lantern_Stone_C1  pos (1057.5, 227.8, 1441.9) rotY 308  bounds X 1057..1058 Y 228..230 Z 1441..1442  src Assets/JTS_StoneLanterns/Prefabs/Lantern_Stone_C1.prefab
+      Platform_Stone_A1  pos (1052.3, 227.7, 1435.2) rotY 308  bounds X 1050..1055 Y 227..228 Z 1433..1438  src Assets/JTS_StoneLanterns/Prefabs/Platform_Stone_A1.prefab
+      Lantern_Stone_C1  pos (1052.3, 228.0, 1435.2) rotY 308  bounds X 1052..1053 Y 228..231 Z 1435..1436  src Assets/JTS_StoneLanterns/Prefabs/Lantern_Stone_C1.prefab
+    GROUP Sanju_Shrine pos (0.0, 0.0, 0.0) children 6 renderers 8  bounds X 1570..1593 Y 191..203 Z 581..597  []
+      Torii_Myoujin_Large1_LOD  pos (1589.0, 193.8, 585.0) rotY 135  bounds X 1585..1593 Y 193..203 Z 581..589  src Assets/JTS_Shrine_Torii_Gates/Prefabs/Torii_Myoujin_Large1_LOD.prefab
+      Lantern_Stone_B1  pos (1577.7, 191.9, 592.1) rotY 135  bounds X 1577..1578 Y 192..194 Z 592..593  src Assets/JTS_StoneLanterns/Prefabs/Lantern_Stone_B1.prefab
+      Lantern_Stone_B1  pos (1581.9, 193.0, 596.3) rotY 135  bounds X 1581..1582 Y 193..195 Z 596..597  src Assets/JTS_StoneLanterns/Prefabs/Lantern_Stone_B1.prefab
+      Lantern_Stone_B2  pos (1581.9, 192.3, 587.9) rotY 135  bounds X 1582..1582 Y 192..194 Z 587..588  src Assets/JTS_StoneLanterns/Prefabs/Lantern_Stone_B2.prefab
+      Lantern_Stone_B2  pos (1586.1, 192.9, 592.1) rotY 135  bounds X 1586..1587 Y 193..195 Z 592..592  src Assets/JTS_StoneLanterns/Prefabs/Lantern_Stone_B2.prefab
+      Torii_Votive_Stone1_LOD  pos (1573.1, 190.6, 591.7) rotY 225  bounds X 1570..1576 Y 191..197 Z 589..594  src Assets/JTS_Shrine_Torii_Gates/Prefabs/Torii_Votive_Stone1_LOD.prefab
+    GROUP Garden pos (0.0, 0.0, 0.0) children 89 renderers 228  bounds X 431..482 Y 106..115 Z 1857..1915  []
+      Platform_Stone_B1  pos (446.4, 107.4, 1895.2) rotY 127  bounds X 445..448 Y 107..108 Z 1894..1897  src Assets/JTS_StoneLanterns/Prefabs/Platform_Stone_B1.prefab
+      Small Rusted House  pos (446.4, 107.7, 1895.2) rotY 127  bounds X 446..446 Y 108..108 Z 1895..1895  src Assets/Japanese Garden Pack/Prefabs/Small Rusted House.prefab
+      Lantern_Stone_D1  pos (444.0, 107.1, 1892.0) rotY 127  bounds X 443..445 Y 107..110 Z 1891..1893  src Assets/JTS_StoneLanterns/Prefabs/Lantern_Stone_D1.prefab
+      Lantern_Stone_D1  pos (448.8, 107.2, 1898.4) rotY 127  bounds X 448..450 Y 107..110 Z 1897..1900  src Assets/JTS_StoneLanterns/Prefabs/Lantern_Stone_D1.prefab
+      Rock Bowl 1  pos (448.3, 107.2, 1891.0) rotY 127  bounds X 448..448 Y 107..107 Z 1891..1891  src Assets/Japanese Garden Pack/Prefabs/Rock Bowl 1.prefab
+      Torii (Double Color)  pos (473.6, 107.0, 1874.8) rotY 127  bounds X 473..474 Y 107..107 Z 1875..1875  src Assets/Japanese Garden Pack/Prefabs/Torii (Double Color).prefab
+      JG_TobiIshi_A_01  pos (472.4, 107.1, 1876.6) rotY 23  bounds X 472..473 Y 107..107 Z 1876..1877  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_TobiIshi_A_01.prefab
+      JG_TobiIshi_A_02  pos (471.1, 107.0, 1877.1) rotY 285  bounds X 471..471 Y 107..107 Z 1877..1877  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_TobiIshi_A_02.prefab
+      JG_TobiIshi_A_01  pos (469.8, 106.9, 1877.6) rotY 165  bounds X 470..470 Y 107..107 Z 1877..1878  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_TobiIshi_A_01.prefab
+      JG_TobiIshi_A_02  pos (468.5, 106.9, 1878.1) rotY 194  bounds X 468..469 Y 107..107 Z 1878..1878  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_TobiIshi_A_02.prefab
+      JG_TobiIshi_A_01  pos (467.2, 106.9, 1878.6) rotY 220  bounds X 467..467 Y 107..107 Z 1878..1879  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_TobiIshi_A_01.prefab
+      JG_TobiIshi_A_02  pos (465.9, 107.0, 1879.2) rotY 172  bounds X 466..466 Y 107..107 Z 1879..1879  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_TobiIshi_A_02.prefab
+      JG_TobiIshi_A_01  pos (464.7, 107.2, 1879.8) rotY 301  bounds X 464..465 Y 107..107 Z 1879..1880  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_TobiIshi_A_01.prefab
+      JG_TobiIshi_A_02  pos (463.5, 107.4, 1880.5) rotY 224  bounds X 463..464 Y 107..108 Z 1880..1881  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_TobiIshi_A_02.prefab
+      JG_TobiIshi_A_01  pos (462.4, 107.5, 1881.2) rotY 200  bounds X 462..463 Y 108..108 Z 1881..1881  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_TobiIshi_A_01.prefab
+      JG_TobiIshi_A_02  pos (461.3, 107.5, 1882.0) rotY 171  bounds X 461..462 Y 108..108 Z 1882..1882  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_TobiIshi_A_02.prefab
+      JG_TobiIshi_A_01  pos (460.3, 107.5, 1882.9) rotY 86  bounds X 460..461 Y 108..108 Z 1883..1883  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_TobiIshi_A_01.prefab
+      JG_TobiIshi_A_02  pos (459.4, 107.5, 1883.9) rotY 164  bounds X 459..460 Y 108..108 Z 1884..1884  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_TobiIshi_A_02.prefab
+      JG_TobiIshi_A_01  pos (458.4, 107.5, 1884.9) rotY 194  bounds X 458..459 Y 108..108 Z 1885..1885  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_TobiIshi_A_01.prefab
+      JG_TobiIshi_A_02  pos (457.5, 107.6, 1886.0) rotY 256  bounds X 457..458 Y 108..108 Z 1886..1886  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_TobiIshi_A_02.prefab
+      JG_TobiIshi_A_01  pos (456.7, 107.5, 1887.1) rotY 190  bounds X 456..457 Y 108..108 Z 1887..1887  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_TobiIshi_A_01.prefab
+      JG_TobiIshi_A_02  pos (455.8, 107.4, 1888.2) rotY 45  bounds X 456..456 Y 107..108 Z 1888..1889  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_TobiIshi_A_02.prefab
+      JG_TobiIshi_A_01  pos (455.0, 107.4, 1889.3) rotY 180  bounds X 455..455 Y 107..107 Z 1889..1890  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_TobiIshi_A_01.prefab
+      JG_TobiIshi_A_02  pos (454.1, 107.3, 1890.4) rotY 199  bounds X 454..454 Y 107..107 Z 1890..1891  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_TobiIshi_A_02.prefab
+      JG_TobiIshi_A_01  pos (453.2, 107.3, 1891.5) rotY 283  bounds X 453..453 Y 107..107 Z 1891..1892  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_TobiIshi_A_01.prefab
+      JG_TobiIshi_A_02  pos (452.3, 107.2, 1892.5) rotY 129  bounds X 452..453 Y 107..107 Z 1892..1893  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_TobiIshi_A_02.prefab
+      Tree_Sakura_Big_Spring_01  pos (450.7, 107.3, 1877.3) rotY 26  bounds X 445..457 Y 107..115 Z 1871..1883  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Trees/Sakura/Tree_Sakura_Big_Spring_01.prefab
+      Tree_Sakura_Big_Spring_05  pos (453.5, 107.2, 1862.5) rotY 61  bounds X 448..460 Y 107..115 Z 1857..1869  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Trees/Sakura/Tree_Sakura_Big_Spring_05.prefab
+      Tree_Sakura_Mid_Spring_01  pos (478.1, 106.9, 1893.2) rotY 70  bounds X 474..482 Y 107..113 Z 1889..1897  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Trees/Sakura/Tree_Sakura_Mid_Spring_01.prefab
+      Tree_Sakura_Mid_Spring_05  pos (437.2, 107.0, 1887.1) rotY 321  bounds X 432..442 Y 107..114 Z 1882..1892  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Trees/Sakura/Tree_Sakura_Mid_Spring_05.prefab
+      Tree_Sakura_Small_Spring_01  pos (467.8, 106.5, 1884.5) rotY 240  bounds X 465..471 Y 107..112 Z 1881..1888  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Trees/Sakura/Tree_Sakura_Small_Spring_01.prefab
+      Tree_Sakura_Small_Spring_05  pos (443.1, 106.8, 1910.9) rotY 118  bounds X 440..446 Y 107..111 Z 1908..1914  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Trees/Sakura/Tree_Sakura_Small_Spring_05.prefab
+      Tree_Sakura_Big_Spring_01  pos (435.5, 107.3, 1874.5) rotY 272  bounds X 431..440 Y 107..115 Z 1870..1879  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Trees/Sakura/Tree_Sakura_Big_Spring_01.prefab
+      Tree_Sakura_Big_Spring_05  pos (454.9, 107.2, 1873.3) rotY 82  bounds X 451..459 Y 107..114 Z 1869..1878  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Trees/Sakura/Tree_Sakura_Big_Spring_05.prefab
+      Tree_Sakura_Mid_Spring_01  pos (464.1, 107.2, 1864.9) rotY 111  bounds X 460..468 Y 107..113 Z 1861..1869  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Trees/Sakura/Tree_Sakura_Mid_Spring_01.prefab
+      Tree_Sakura_Mid_Spring_05  pos (451.9, 106.6, 1908.7) rotY 342  bounds X 448..456 Y 107..113 Z 1905..1913  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Trees/Sakura/Tree_Sakura_Mid_Spring_05.prefab
+      Tree_Sakura_Small_Spring_01  pos (465.8, 106.7, 1906.3) rotY 319  bounds X 463..469 Y 107..112 Z 1903..1909  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Trees/Sakura/Tree_Sakura_Small_Spring_01.prefab
+      Tree_Sakura_Small_Spring_05  pos (436.9, 107.1, 1895.2) rotY 256  bounds X 434..440 Y 107..111 Z 1893..1898  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Trees/Sakura/Tree_Sakura_Small_Spring_05.prefab
+      Tree_Sakura_Big_Spring_01  pos (462.3, 106.8, 1901.6) rotY 329  bounds X 457..468 Y 107..114 Z 1896..1907  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Trees/Sakura/Tree_Sakura_Big_Spring_01.prefab
+      Tree_Sakura_Big_Spring_05  pos (468.2, 107.1, 1869.6) rotY 10  bounds X 463..473 Y 107..115 Z 1865..1874  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Trees/Sakura/Tree_Sakura_Big_Spring_05.prefab
+      Plant_Boxwood_Spring_01  pos (477.2, 107.5, 1902.1) rotY 312  bounds X 477..478 Y 107..108 Z 1901..1903  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/Boxwood/Plant_Boxwood_Spring_01.prefab
+      Plant_Boxwood_Single_Spring_02  pos (456.5, 106.3, 1914.0) rotY 238  bounds X 456..457 Y 106..107 Z 1913..1915  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/Boxwood/Single/Plant_Boxwood_Single_Spring_02.prefab
+      Plant_Boxwood_Spring_03  pos (446.5, 107.4, 1872.6) rotY 233  bounds X 446..447 Y 107..108 Z 1872..1873  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/Boxwood/Plant_Boxwood_Spring_03.prefab
+      Plant_Boxwood_Single_Spring_01  pos (460.9, 106.4, 1910.0) rotY 211  bounds X 460..462 Y 106..107 Z 1909..1911  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/Boxwood/Single/Plant_Boxwood_Single_Spring_01.prefab
+      Plant_Boxwood_Spring_02  pos (445.8, 107.5, 1865.6) rotY 111  bounds X 445..447 Y 107..108 Z 1865..1866  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/Boxwood/Plant_Boxwood_Spring_02.prefab
+      Plant_Boxwood_Single_Spring_03  pos (438.8, 107.3, 1877.0) rotY 207  bounds X 438..439 Y 107..108 Z 1876..1878  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/Boxwood/Single/Plant_Boxwood_Single_Spring_03.prefab
+      Plant_Boxwood_Spring_01  pos (474.1, 107.3, 1903.2) rotY 161  bounds X 473..475 Y 107..108 Z 1903..1904  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/Boxwood/Plant_Boxwood_Spring_01.prefab
+      Plant_Boxwood_Single_Spring_02  pos (474.7, 107.4, 1906.7) rotY 28  bounds X 474..475 Y 107..108 Z 1906..1907  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/Boxwood/Single/Plant_Boxwood_Single_Spring_02.prefab
+      Plant_Boxwood_Spring_03  pos (463.9, 106.2, 1913.5) rotY 56  bounds X 463..465 Y 106..107 Z 1913..1914  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/Boxwood/Plant_Boxwood_Spring_03.prefab
+      Plant_Boxwood_Single_Spring_01  pos (457.9, 107.2, 1870.8) rotY 180  bounds X 457..458 Y 107..108 Z 1870..1871  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/Boxwood/Single/Plant_Boxwood_Single_Spring_01.prefab
+      Plant_Boxwood_Spring_02  pos (470.0, 106.5, 1880.4) rotY 250  bounds X 469..471 Y 106..107 Z 1880..1881  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/Boxwood/Plant_Boxwood_Spring_02.prefab
+      Plant_Boxwood_Single_Spring_03  pos (459.5, 107.6, 1877.1) rotY 252  bounds X 459..460 Y 108..108 Z 1876..1878  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/Boxwood/Single/Plant_Boxwood_Single_Spring_03.prefab
+      Plant_Boxwood_Spring_01  pos (440.7, 107.3, 1881.9) rotY 181  bounds X 440..441 Y 107..108 Z 1881..1882  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/Boxwood/Plant_Boxwood_Spring_01.prefab
+      Plant_Boxwood_Single_Spring_02  pos (445.6, 107.1, 1905.2) rotY 61  bounds X 445..446 Y 107..108 Z 1904..1906  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/Boxwood/Single/Plant_Boxwood_Single_Spring_02.prefab
+      Plant_Boxwood_Spring_03  pos (453.4, 106.4, 1913.9) rotY 147  bounds X 453..454 Y 106..107 Z 1913..1915  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/Boxwood/Plant_Boxwood_Spring_03.prefab
+      Plant_Boxwood_Single_Spring_01  pos (448.2, 107.2, 1901.8) rotY 206  bounds X 448..449 Y 107..108 Z 1901..1902  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/Boxwood/Single/Plant_Boxwood_Single_Spring_01.prefab
+      Plant_Boxwood_Spring_02  pos (458.7, 107.3, 1863.3) rotY 12  bounds X 458..459 Y 107..108 Z 1862..1864  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/Boxwood/Plant_Boxwood_Spring_02.prefab
+      Plant_Boxwood_Single_Spring_03  pos (468.3, 107.3, 1894.0) rotY 257  bounds X 468..469 Y 107..108 Z 1893..1895  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/Boxwood/Single/Plant_Boxwood_Single_Spring_03.prefab
+      Plant_Boxwood_Spring_01  pos (455.9, 107.0, 1900.9) rotY 220  bounds X 455..457 Y 107..108 Z 1900..1902  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/Boxwood/Plant_Boxwood_Spring_01.prefab
+      Plant_Boxwood_Single_Spring_02  pos (471.7, 106.5, 1880.4) rotY 312  bounds X 471..473 Y 106..107 Z 1880..1881  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/Boxwood/Single/Plant_Boxwood_Single_Spring_02.prefab
+      Plant_Boxwood_Spring_03  pos (437.4, 107.0, 1903.7) rotY 207  bounds X 437..438 Y 107..108 Z 1903..1904  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/Boxwood/Plant_Boxwood_Spring_03.prefab
+      Plant_Boxwood_Single_Spring_01  pos (441.4, 107.3, 1870.6) rotY 247  bounds X 441..442 Y 107..108 Z 1870..1871  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/Boxwood/Single/Plant_Boxwood_Single_Spring_01.prefab
+      Plant_Boxwood_Spring_02  pos (475.6, 107.3, 1897.0) rotY 2  bounds X 475..476 Y 107..108 Z 1896..1898  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/Boxwood/Plant_Boxwood_Spring_02.prefab
+      Plant_Boxwood_Single_Spring_03  pos (438.4, 107.0, 1902.1) rotY 250  bounds X 438..439 Y 107..108 Z 1902..1903  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/Boxwood/Single/Plant_Boxwood_Single_Spring_03.prefab
+      Plant_Boxwood_Spring_01  pos (458.9, 106.8, 1904.9) rotY 8  bounds X 458..459 Y 107..108 Z 1904..1906  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/Boxwood/Plant_Boxwood_Spring_01.prefab
+      Plant_Boxwood_Single_Spring_02  pos (456.5, 107.1, 1895.4) rotY 268  bounds X 456..457 Y 107..108 Z 1895..1896  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/Boxwood/Single/Plant_Boxwood_Single_Spring_02.prefab
+      Plant_Boxwood_Spring_03  pos (466.0, 107.0, 1887.4) rotY 23  bounds X 465..467 Y 107..108 Z 1887..1888  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/Boxwood/Plant_Boxwood_Spring_03.prefab
+      Plant_Boxwood_Single_Spring_01  pos (463.3, 107.3, 1896.7) rotY 50  bounds X 463..464 Y 107..108 Z 1896..1898  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/Boxwood/Single/Plant_Boxwood_Single_Spring_01.prefab
+      Plant_Boxwood_Spring_02  pos (468.0, 106.8, 1910.1) rotY 165  bounds X 467..469 Y 107..108 Z 1909..1911  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/Boxwood/Plant_Boxwood_Spring_02.prefab
+      Plant_Boxwood_Single_Spring_03  pos (472.0, 107.2, 1908.4) rotY 1  bounds X 471..473 Y 107..108 Z 1908..1909  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/Boxwood/Single/Plant_Boxwood_Single_Spring_03.prefab
+      Plant_PaintedFern_Spring_01  pos (435.2, 107.7, 1878.3) rotY 201  bounds X 434..436 Y 108..108 Z 1878..1879  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/PaintedFern/Plant_PaintedFern_Spring_01.prefab
+      Plant_PaintedFern_Single_Spring_02  pos (460.2, 107.3, 1864.3) rotY 92  bounds X 459..461 Y 107..108 Z 1864..1865  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/PaintedFern/Single/Plant_PaintedFern_Single_Spring_02.prefab
+      Plant_PaintedFern_Spring_01  pos (454.2, 107.3, 1867.1) rotY 244  bounds X 453..455 Y 107..108 Z 1866..1868  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/PaintedFern/Plant_PaintedFern_Spring_01.prefab
+      Plant_PaintedFern_Single_Spring_02  pos (445.7, 107.5, 1884.9) rotY 24  bounds X 445..446 Y 107..108 Z 1884..1886  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/PaintedFern/Single/Plant_PaintedFern_Single_Spring_02.prefab
+      Plant_PaintedFern_Spring_01  pos (458.7, 106.6, 1909.4) rotY 69  bounds X 458..460 Y 106..107 Z 1909..1910  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/PaintedFern/Plant_PaintedFern_Spring_01.prefab
+      Plant_PaintedFern_Single_Spring_02  pos (447.8, 107.5, 1871.1) rotY 344  bounds X 447..449 Y 107..108 Z 1870..1872  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/PaintedFern/Single/Plant_PaintedFern_Single_Spring_02.prefab
+      Plant_PaintedFern_Spring_01  pos (464.2, 107.2, 1870.0) rotY 61  bounds X 464..465 Y 107..108 Z 1869..1871  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/PaintedFern/Plant_PaintedFern_Spring_01.prefab
+      Plant_PaintedFern_Single_Spring_02  pos (455.5, 106.6, 1912.3) rotY 44  bounds X 455..457 Y 106..107 Z 1911..1913  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/PaintedFern/Single/Plant_PaintedFern_Single_Spring_02.prefab
+      Plant_PaintedFern_Spring_01  pos (468.9, 107.5, 1896.3) rotY 45  bounds X 468..470 Y 107..108 Z 1895..1897  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/PaintedFern/Plant_PaintedFern_Spring_01.prefab
+      Plant_PaintedFern_Single_Spring_02  pos (469.8, 107.4, 1897.4) rotY 299  bounds X 469..471 Y 107..108 Z 1897..1898  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/PaintedFern/Single/Plant_PaintedFern_Single_Spring_02.prefab
+      Plant_PaintedFern_Spring_01  pos (477.1, 106.7, 1882.7) rotY 243  bounds X 476..478 Y 106..107 Z 1882..1883  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/PaintedFern/Plant_PaintedFern_Spring_01.prefab
+      Plant_PaintedFern_Single_Spring_02  pos (441.8, 107.3, 1882.6) rotY 246  bounds X 441..443 Y 107..108 Z 1882..1884  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Plants/PaintedFern/Single/Plant_PaintedFern_Single_Spring_02.prefab
+      JG_Rock_A_01  pos (466.8, 107.2, 1901.0) rotY 297  bounds X 466..467 Y 107..108 Z 1900..1902  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_01.prefab
+      JG_Rock_A_02  pos (471.4, 106.4, 1883.1) rotY 214  bounds X 471..472 Y 106..108 Z 1882..1884  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_02.prefab
+      JG_Rock_A_03  pos (450.8, 107.3, 1872.9) rotY 130  bounds X 450..452 Y 107..108 Z 1872..1874  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_03.prefab
+      JG_Rock_A_01  pos (447.0, 107.4, 1881.0) rotY 314  bounds X 446..448 Y 107..109 Z 1880..1882  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_01.prefab
+      JG_Rock_A_02  pos (456.5, 106.5, 1909.8) rotY 357  bounds X 456..457 Y 106..107 Z 1909..1910  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_02.prefab
+      JG_Rock_A_03  pos (469.0, 107.2, 1901.8) rotY 344  bounds X 468..470 Y 107..108 Z 1901..1902  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_03.prefab
+      JG_Rock_A_01  pos (474.9, 106.6, 1884.8) rotY 12  bounds X 474..476 Y 106..108 Z 1884..1886  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_01.prefab
+    GROUP Bay_Shore pos (0.0, 0.0, 0.0) children 39 renderers 99  bounds X 1363..1662 Y 45..49 Z 1600..2056  []
+      Lantern_Stone_A2  pos (1363.3, 46.8, 1615.4) rotY 239  bounds X 1363..1364 Y 47..48 Z 1615..1616  src Assets/JTS_StoneLanterns/Prefabs/Lantern_Stone_A2.prefab
+      Lantern_Stone_A2  pos (1366.4, 46.9, 1610.3) rotY 239  bounds X 1366..1367 Y 47..48 Z 1610..1611  src Assets/JTS_StoneLanterns/Prefabs/Lantern_Stone_A2.prefab
+      Basket 1  pos (1365.7, 46.3, 1619.2) rotY 85  bounds X 1366..1366 Y 46..46 Z 1619..1619  src Assets/Japanese Garden Pack/Prefabs/Basket 1.prefab
+      Basket 2  pos (1364.4, 46.4, 1619.4) rotY 8  bounds X 1364..1364 Y 46..46 Z 1619..1619  src Assets/Japanese Garden Pack/Prefabs/Basket 2.prefab
+      Rake  pos (1365.3, 46.4, 1620.8) rotY 309  bounds X 1365..1365 Y 46..46 Z 1621..1621  src Assets/Japanese Garden Pack/Prefabs/Rake.prefab
+      Rock Bowl 2  pos (1370.1, 46.6, 1610.2) rotY 239  bounds X 1370..1370 Y 47..47 Z 1610..1610  src Assets/Japanese Garden Pack/Prefabs/Rock Bowl 2.prefab
+      Fence With Post  pos (1366.8, 47.3, 1605.9) rotY 329  bounds X 1367..1367 Y 47..47 Z 1606..1606  src Assets/Japanese Garden Pack/Prefabs/Fence With Post.prefab
+      Fence With Post  pos (1368.0, 47.3, 1604.0) rotY 329  bounds X 1368..1368 Y 47..47 Z 1604..1604  src Assets/Japanese Garden Pack/Prefabs/Fence With Post.prefab
+      Fence With Post  pos (1369.1, 47.3, 1602.1) rotY 329  bounds X 1369..1369 Y 47..47 Z 1602..1602  src Assets/Japanese Garden Pack/Prefabs/Fence With Post.prefab
+      Fence With Post  pos (1370.3, 47.3, 1600.2) rotY 329  bounds X 1370..1370 Y 47..47 Z 1600..1600  src Assets/Japanese Garden Pack/Prefabs/Fence With Post.prefab
+      JG_Rock_A_01  pos (1416.8, 45.3, 1826.2) rotY 50  bounds X 1415..1418 Y 45..48 Z 1825..1828  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_01.prefab
+      JG_Rock_A_01  pos (1451.8, 45.6, 2053.9) rotY 201  bounds X 1450..1454 Y 45..49 Z 2052..2056  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_01.prefab
+      JG_Rock_A_01  pos (1454.5, 45.5, 2000.1) rotY 46  bounds X 1453..1456 Y 45..49 Z 1998..2002  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_01.prefab
+      JG_Rock_A_02  pos (1536.5, 45.8, 1764.5) rotY 39  bounds X 1535..1538 Y 46..49 Z 1763..1766  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_02.prefab
+      JG_Rock_A_02  pos (1431.9, 45.1, 1796.4) rotY 266  bounds X 1430..1434 Y 45..48 Z 1795..1798  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_02.prefab
+      JG_Rock_A_03  pos (1514.0, 45.8, 1787.8) rotY 81  bounds X 1513..1515 Y 46..47 Z 1786..1790  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_03.prefab
+      JG_Rock_A_03  pos (1514.6, 45.7, 1788.3) rotY 220  bounds X 1512..1518 Y 46..48 Z 1785..1791  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_03.prefab
+      JG_Rock_A_03  pos (1613.8, 45.2, 1795.5) rotY 143  bounds X 1612..1615 Y 45..46 Z 1794..1797  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_03.prefab
+      JG_Rock_A_02  pos (1413.3, 46.2, 1629.2) rotY 249  bounds X 1412..1415 Y 46..48 Z 1628..1631  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_02.prefab
+      JG_Rock_A_03  pos (1411.3, 46.1, 1626.6) rotY 57  bounds X 1409..1414 Y 46..48 Z 1624..1629  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_03.prefab
+      JG_Rock_A_03  pos (1422.8, 45.4, 1856.3) rotY 119  bounds X 1420..1425 Y 45..47 Z 1854..1859  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_03.prefab
+      JG_Rock_A_02  pos (1426.3, 45.1, 1853.8) rotY 125  bounds X 1425..1428 Y 45..47 Z 1852..1855  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_02.prefab
+      JG_Rock_A_03  pos (1422.2, 45.5, 1856.3) rotY 232  bounds X 1420..1425 Y 45..47 Z 1854..1859  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_03.prefab
+      JG_Rock_A_03  pos (1590.3, 45.3, 1789.0) rotY 318  bounds X 1587..1593 Y 45..47 Z 1786..1792  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_03.prefab
+      JG_Rock_A_03  pos (1660.5, 45.6, 1887.1) rotY 180  bounds X 1658..1662 Y 45..47 Z 1885..1889  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_03.prefab
+      JG_Rock_A_02  pos (1656.0, 45.4, 1887.0) rotY 199  bounds X 1655..1657 Y 45..47 Z 1886..1888  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_02.prefab
+      JG_Rock_A_02  pos (1659.4, 45.8, 1885.2) rotY 16  bounds X 1658..1660 Y 46..48 Z 1884..1886  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_02.prefab
+      JG_Rock_A_03  pos (1597.8, 45.7, 1819.8) rotY 337  bounds X 1595..1600 Y 46..47 Z 1818..1822  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_03.prefab
+      JG_Rock_A_01  pos (1596.6, 45.8, 1820.6) rotY 143  bounds X 1595..1598 Y 46..48 Z 1819..1822  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_01.prefab
+      JG_Rock_A_01  pos (1599.1, 45.6, 1817.8) rotY 133  bounds X 1597..1601 Y 45..49 Z 1816..1820  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_01.prefab
+      JG_Rock_A_02  pos (1648.1, 46.0, 1861.4) rotY 33  bounds X 1647..1650 Y 46..48 Z 1860..1863  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_02.prefab
+      JG_Rock_A_03  pos (1644.1, 45.6, 1860.8) rotY 275  bounds X 1642..1646 Y 45..47 Z 1859..1863  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_03.prefab
+      JG_Rock_A_03  pos (1647.6, 45.9, 1864.1) rotY 227  bounds X 1646..1649 Y 46..47 Z 1862..1866  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_03.prefab
+      JG_Rock_A_03  pos (1632.5, 45.6, 1813.9) rotY 87  bounds X 1632..1634 Y 46..47 Z 1813..1815  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_03.prefab
+      JG_Rock_A_03  pos (1636.3, 45.9, 1812.5) rotY 34  bounds X 1634..1639 Y 46..48 Z 1810..1815  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_03.prefab
+      JG_Rock_A_02  pos (1454.7, 45.9, 1777.4) rotY 208  bounds X 1454..1456 Y 46..48 Z 1776..1779  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_02.prefab
+      JG_Rock_A_01  pos (1389.7, 45.9, 1609.6) rotY 170  bounds X 1389..1391 Y 46..48 Z 1609..1611  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_01.prefab
+      JG_Rock_A_01  pos (1387.2, 45.9, 1609.2) rotY 285  bounds X 1386..1389 Y 46..48 Z 1608..1611  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_01.prefab
+      JG_Rock_A_03  pos (1390.3, 45.9, 1609.5) rotY 152  bounds X 1388..1393 Y 46..48 Z 1607..1612  src Assets/Waldemarst/FreeJapaneseGarden/Prefabs/Misc/Rocks/JG_Rock_A_03.prefab
+    GROUP Korean_Buildings pos (0.0, 0.0, 0.0) children 7 renderers 14782  bounds X 393..2275 Y 46..153 Z 771..2318  []
+      KR_Geoncheonggung_Palace  pos (1211.2, 51.5, 2279.2) rotY 0  bounds X 1178..1244 Y 52..63 Z 2240..2318  src Assets/_IslandEnvironment/Buildings/KR_Geoncheonggung_Palace.prefab
+      KR_Donggung_Court_03  pos (1788.8, 46.4, 2016.8) rotY 150  bounds X 1756..1827 Y 46..52 Z 1983..2055  src Assets/_IslandEnvironment/Buildings/KR_Donggung_Court_03.prefab
+      KR_Donggung_Court_02  pos (575.3, 142.0, 1115.3) rotY 30  bounds X 538..611 Y 142..153 Z 1088..1150  src Assets/_IslandEnvironment/Buildings/KR_Donggung_Court_02.prefab
+      KR_Donggung_Court_01  pos (2254.3, 95.5, 814.3) rotY 90  bounds X 2233..2275 Y 95..104 Z 782..846  src Assets/_IslandEnvironment/Buildings/KR_Donggung_Court_01.prefab
+      KR_Donggung_Court_04  pos (2119.7, 107.9, 799.7) rotY 30  bounds X 2084..2155 Y 108..114 Z 771..828  src Assets/_IslandEnvironment/Buildings/KR_Donggung_Court_04.prefab
+      KR_Gyedong_House  pos (500.4, 98.3, 2000.4) rotY 150  bounds X 481..525 Y 98..103 Z 1980..2014  src Assets/_IslandEnvironment/Buildings/KR_Gyedong_House.prefab
+      KR_Donggung_EastHall  pos (417.0, 113.7, 1257.0) rotY 150  bounds X 393..441 Y 113..124 Z 1233..1280  src Assets/_IslandEnvironment/Buildings/KR_Donggung_EastHall.prefab
+  ROOT Player_Setup pos (0.0, 0.0, 0.0) children 2 renderers 1  bounds X 917..918 Y 225..227 Z 1543..1544  comps []
+    GROUP PlayerArmature pos (917.6, 225.3, 1543.8) children 3 renderers 1  bounds X 917..918 Y 225..227 Z 1543..1544  [Animator,CharacterController,ThirdPersonController,BasicRigidBodyPush,StarterAssetsInputs,PlayerInput]
+      PlayerCameraRoot  pos (917.6, 226.7, 1543.8) rotY 128    src Assets/Starter Assets/Runtime/ThirdPersonController/Prefabs/PlayerArmature.prefab
+      Geometry  pos (917.6, 225.3, 1543.8) rotY 128  bounds X 917..918 Y 225..227 Z 1543..1544  src Assets/Starter Assets/Runtime/ThirdPersonController/Prefabs/PlayerArmature.prefab
+      Skeleton  pos (917.6, 225.3, 1543.8) rotY 128    src Assets/Starter Assets/Runtime/ThirdPersonController/Prefabs/PlayerArmature.prefab
+    GROUP PlayerFollowCamera pos (914.5, 227.2, 1546.3) children 1 renderers 0    [CinemachineVirtualCamera]
+      cm  pos (914.5, 227.2, 1546.3) rotY 128    src Assets/Starter Assets/Runtime/ThirdPersonController/Prefabs/PlayerFollowCamera.prefab
+  RenderSettings: fog True sun (33.2, 126.8, 358.0) skybox Sky Material
+  LIGHT Directional Light Directional rot (33.2, 126.8, 358.0)
+==================== Assets/Free Island Collection/Scenes/Scene 2.unity
+  roots: Directional Light, Main Camera, Reflection Probe, Terrain, Cube
+  TERRAIN 'Terrain' data 'Terrain 2' (Assets/Free Island Collection/Environment/Terrain/Terrains/Terrain 2.asset)
+    position (0.00, 0.00, 0.00)  rotation (0.0, 0.0, 0.0)  scale (1.00, 1.00, 1.00)
+    size (2500.0, 650.0, 2500.0) (X x heightScale x Z)  heightmap 2049  alphamap 2048  basemap 1024  detail 2048
+    world X 0.0..2500.0  Z 0.0..2500.0  height 24.62..409.79 m (mean 91.83)
+    fraction above y=0: 100.0 %
+    fraction above y=45: 60.2 %
+    layers: 0:layer_Sand_DiffuseSand_Normal2023054508611406[Sand_Diffuse tile 5], 1:layer_Dirt_2_DiffuseDirt_2_Normal2023054508611406[Dirt_2_Diffuse tile 5], 2:layer_Mossy_Rock_DiffuseMossy_Rock_Normal2023054508611406[Mossy_Rock_Diffuse tile 5], 3:layer_Dirt_1_DiffuseDirt_1_Normal2023054508611406[Dirt_1_Diffuse tile 5], 4:layer_Grass_1_DiffuseGrass_1_Normal2023054508611406[Grass_1_Diffuse tile 5], 5:layer_Grass_2_DiffuseGrass_2_Normal2023054508611406[Grass_2_Diffuse tile 5], 6:layer_Cliff_1_DiffuseCliff_1_Normaleda51f90c7f37482[Cliff_1_Diffuse tile 150], 7:layer_Cliff_2_DiffuseCliff_2_Normaleda51f90c7f37482[Cliff_2_Diffuse tile 150]
+    layer coverage: 0:47.4 %, 1:1.0 %, 2:12.2 %, 3:7.6 %, 4:9.9 %, 5:6.3 %, 6:12.7 %, 7:2.9 %
+    trees: 0 instances, prototypes: 
+    detail prototypes: 0:Grass_A, 1:Grass_B
+      detail 0: total density 1530829
+      detail 1: total density 9821224
+    drawTreesAndFoliage True treeDistance 2000 basemapDistance 2000 material TerrainLit/Universal Render Pipeline/Terrain/Lit
+  ROOT Directional Light pos (584.8, 262.1, 25.6) children 0 renderers 0  no renderers  comps [Light]
+  ROOT Main Camera pos (1871.8, 86.7, 2099.6) children 0 renderers 0  no renderers  comps [Camera,FlareLayer,AudioListener]
+  ROOT Reflection Probe pos (1250.0, 0.0, 1250.0) children 0 renderers 0  no renderers  comps [ReflectionProbe]
+  ROOT Cube pos (1145.4, 67.1, 1566.1) children 0 renderers 1  bounds X 1145..1146 Y 67..68 Z 1566..1567  comps [MeshFilter,MeshRenderer,BoxCollider]
+  RenderSettings: fog True sun (33.2, 306.5, 358.0) skybox Sky Material
+  LIGHT Directional Light Directional rot (33.2, 306.5, 358.0)
+==================== Assets/Free Island Collection/Scenes/Scene 3.unity
+  roots: Directional Light, Main Camera, Reflection Probe, Terrain
+  TERRAIN 'Terrain' data 'Terrain 3' (Assets/Free Island Collection/Environment/Terrain/Terrains/Terrain 3.asset)
+    position (0.00, 0.00, 0.00)  rotation (0.0, 0.0, 0.0)  scale (1.00, 1.00, 1.00)
+    size (2500.0, 750.0, 2500.0) (X x heightScale x Z)  heightmap 2049  alphamap 2048  basemap 1024  detail 2048
+    world X 0.0..2500.0  Z 0.0..2500.0  height 21.40..293.65 m (mean 94.92)
+    fraction above y=0: 100.0 %
+    fraction above y=45: 83.6 %
+    layers: 0:layer_Sand_DiffuseSand_Normal2023054508611406[Sand_Diffuse tile 5], 1:layer_Dirt_2_DiffuseDirt_2_Normal2023054508611406[Dirt_2_Diffuse tile 5], 2:layer_Mossy_Rock_DiffuseMossy_Rock_Normal2023054508611406[Mossy_Rock_Diffuse tile 5], 3:layer_Dirt_1_DiffuseDirt_1_Normal2023054508611406[Dirt_1_Diffuse tile 5], 4:layer_Grass_1_DiffuseGrass_1_Normal2023054508611406[Grass_1_Diffuse tile 5], 5:layer_Grass_2_DiffuseGrass_2_Normal2023054508611406[Grass_2_Diffuse tile 5], 6:layer_Cliff_1_DiffuseCliff_1_Normaleda51f90c7f37482[Cliff_1_Diffuse tile 150], 7:layer_Cliff_2_DiffuseCliff_2_Normaleda51f90c7f37482[Cliff_2_Diffuse tile 150]
+    layer coverage: 0:47.3 %, 1:0.7 %, 2:13.7 %, 3:9.8 %, 4:11.6 %, 5:6.8 %, 6:9.9 %, 7:0.2 %
+    trees: 0 instances, prototypes: 
+    detail prototypes: 0:Grass_A, 1:Grass_B
+      detail 0: total density 1309150
+      detail 1: total density 11628867
+    drawTreesAndFoliage True treeDistance 2000 basemapDistance 2000 material TerrainLit/Universal Render Pipeline/Terrain/Lit
+  ROOT Directional Light pos (584.8, 262.1, 25.6) children 0 renderers 0  no renderers  comps [Light]
+  ROOT Main Camera pos (1541.7, 222.1, 663.2) children 0 renderers 0  no renderers  comps [Camera,FlareLayer,AudioListener]
+  ROOT Reflection Probe pos (1250.0, 0.0, 1250.0) children 0 renderers 0  no renderers  comps [ReflectionProbe]
+  RenderSettings: fog True sun (33.2, 306.5, 358.0) skybox Sky Material
+  LIGHT Directional Light Directional rot (33.2, 306.5, 358.0)
+==================== Assets/Free Island Collection/Scenes/Scene 4.unity
+  roots: Directional Light, Main Camera, Reflection Probe, Terrain
+  TERRAIN 'Terrain' data 'Terrain 4' (Assets/Free Island Collection/Environment/Terrain/Terrains/Terrain 4.asset)
+    position (0.00, 0.00, 0.00)  rotation (0.0, 0.0, 0.0)  scale (1.00, 1.00, 1.00)
+    size (2500.0, 650.0, 2500.0) (X x heightScale x Z)  heightmap 2049  alphamap 2048  basemap 1024  detail 2048
+    world X 0.0..2500.0  Z 0.0..2500.0  height 20.27..361.48 m (mean 96.64)
+    fraction above y=0: 100.0 %
+    fraction above y=45: 61.4 %
+    layers: 0:layer_Sand_DiffuseSand_Normal2023054508611406[Sand_Diffuse tile 5], 1:layer_Dirt_2_DiffuseDirt_2_Normal2023054508611406[Dirt_2_Diffuse tile 5], 2:layer_Mossy_Rock_DiffuseMossy_Rock_Normal2023054508611406[Mossy_Rock_Diffuse tile 5], 3:layer_Dirt_1_DiffuseDirt_1_Normal2023054508611406[Dirt_1_Diffuse tile 5], 4:layer_Grass_1_DiffuseGrass_1_Normal2023054508611406[Grass_1_Diffuse tile 5], 5:layer_Grass_2_DiffuseGrass_2_Normal2023054508611406[Grass_2_Diffuse tile 5], 6:layer_Cliff_1_DiffuseCliff_1_Normaleda51f90c7f37482[Cliff_1_Diffuse tile 150], 7:layer_Cliff_2_DiffuseCliff_2_Normaleda51f90c7f37482[Cliff_2_Diffuse tile 150]
+    layer coverage: 0:46.3 %, 1:1.4 %, 2:15.3 %, 3:6.7 %, 4:9.5 %, 5:7.6 %, 6:9.9 %, 7:3.2 %
+    trees: 0 instances, prototypes: 
+    detail prototypes: 0:Grass_A, 1:Grass_B
+      detail 0: total density 1497876
+      detail 1: total density 10911096
+    drawTreesAndFoliage True treeDistance 2000 basemapDistance 2000 material TerrainLit/Universal Render Pipeline/Terrain/Lit
+  ROOT Directional Light pos (584.8, 262.1, 25.6) children 0 renderers 0  no renderers  comps [Light]
+  ROOT Main Camera pos (1327.9, 134.4, 307.0) children 0 renderers 0  no renderers  comps [Camera,FlareLayer,AudioListener]
+  ROOT Reflection Probe pos (1250.0, 0.0, 1250.0) children 0 renderers 0  no renderers  comps [ReflectionProbe]
+  RenderSettings: fog True sun (33.2, 306.5, 358.0) skybox Sky Material
+  LIGHT Directional Light Directional rot (33.2, 306.5, 358.0)
+==================== Assets/Free Island Collection/Scenes/Scene 5.unity
+  roots: Directional Light, Main Camera, Reflection Probe, Terrain
+  TERRAIN 'Terrain' data 'Terrain 5' (Assets/Free Island Collection/Environment/Terrain/Terrains/Terrain 5.asset)
+    position (0.00, 0.00, 0.00)  rotation (0.0, 0.0, 0.0)  scale (1.00, 1.00, 1.00)
+    size (2500.0, 650.0, 2500.0) (X x heightScale x Z)  heightmap 2049  alphamap 2048  basemap 1024  detail 2048
+    world X 0.0..2500.0  Z 0.0..2500.0  height 19.54..426.11 m (mean 97.98)
+    fraction above y=0: 100.0 %
+    fraction above y=45: 58.6 %
+    layers: 0:layer_Sand_DiffuseSand_Normal2023054508611406[Sand_Diffuse tile 5], 1:layer_Dirt_2_DiffuseDirt_2_Normal2023054508611406[Dirt_2_Diffuse tile 5], 2:layer_Mossy_Rock_DiffuseMossy_Rock_Normal2023054508611406[Mossy_Rock_Diffuse tile 5], 3:layer_Dirt_1_DiffuseDirt_1_Normal2023054508611406[Dirt_1_Diffuse tile 5], 4:layer_Grass_1_DiffuseGrass_1_Normal2023054508611406[Grass_1_Diffuse tile 5], 5:layer_Grass_2_DiffuseGrass_2_Normal2023054508611406[Grass_2_Diffuse tile 5], 6:layer_Cliff_1_DiffuseCliff_1_Normaleda51f90c7f37482[Cliff_1_Diffuse tile 150], 7:layer_Cliff_2_DiffuseCliff_2_Normaleda51f90c7f37482[Cliff_2_Diffuse tile 150]
+    layer coverage: 0:49.2 %, 1:0.9 %, 2:11.5 %, 3:4.0 %, 4:8.1 %, 5:6.1 %, 6:16.2 %, 7:3.9 %
+    trees: 0 instances, prototypes: 
+    detail prototypes: 0:Grass_A, 1:Grass_B
+      detail 0: total density 1056056
+      detail 1: total density 8529092
+    drawTreesAndFoliage True treeDistance 2000 basemapDistance 2000 material TerrainLit/Universal Render Pipeline/Terrain/Lit
+  ROOT Directional Light pos (584.8, 262.1, 25.6) children 0 renderers 0  no renderers  comps [Light]
+  ROOT Main Camera pos (1713.0, 79.5, 708.3) children 0 renderers 0  no renderers  comps [Camera,FlareLayer,AudioListener]
+  ROOT Reflection Probe pos (1250.0, 0.0, 1250.0) children 0 renderers 0  no renderers  comps [ReflectionProbe]
+  RenderSettings: fog True sun (33.2, 306.5, 358.0) skybox Sky Material
+  LIGHT Directional Light Directional rot (33.2, 306.5, 358.0)
+Build scenes: 

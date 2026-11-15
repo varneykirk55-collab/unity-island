@@ -1,0 +1,2169 @@
+{
+    "GeneratorVersion": 1,
+    "SourceScene": "Assets/Free Island Collection/Scenes/Scene 1.unity",
+    "GeneratedUtc": "2026-11-15T00:50:46Z",
+    "CoordinateSystem": "Unity world space, metres. Map up = north = +Z, right = east = +X. Pixel coordinates from the image's top-left corner.",
+    "OverheadImage": "island_overhead.png",
+    "DeveloperImage": "island_devmap.png",
+    "AnalysisImage": "island_terrain_analysis.png",
+    "Overhead": {
+        "WorldMin": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "WorldSize": {
+            "x": 2500.0,
+            "y": 2500.0
+        },
+        "ImageSize": {
+            "x": 4096,
+            "y": 4096
+        },
+        "MapRectMin": {
+            "x": 0,
+            "y": 0
+        },
+        "MapRectSize": {
+            "x": 4096,
+            "y": 4096
+        }
+    },
+    "DeveloperMap": {
+        "WorldMin": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "WorldSize": {
+            "x": 2500.0,
+            "y": 2500.0
+        },
+        "ImageSize": {
+            "x": 5936,
+            "y": 4726
+        },
+        "MapRectMin": {
+            "x": 300,
+            "y": 330
+        },
+        "MapRectSize": {
+            "x": 4096,
+            "y": 4096
+        }
+    },
+    "Analysis": {
+        "WorldMin": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "WorldSize": {
+            "x": 2500.0,
+            "y": 2500.0
+        },
+        "ImageSize": {
+            "x": 4096,
+            "y": 4566
+        },
+        "MapRectMin": {
+            "x": 0,
+            "y": 0
+        },
+        "MapRectSize": {
+            "x": 4096,
+            "y": 4096
+        }
+    },
+    "Grid": {
+        "CellSize": 250.0,
+        "NorthWestCorner": {
+            "x": 0.0,
+            "y": 2500.0
+        },
+        "Columns": 10,
+        "Rows": 10
+    },
+    "HasSeaLevel": true,
+    "SeaLevel": 45.0,
+    "SeaLevelSource": "Island_Environment/Ocean",
+    "MinHeight": 17.521591186523439,
+    "MaxHeight": 408.13458251953127,
+    "Terrains": [
+        {
+            "Name": "Terrain",
+            "DataAsset": "Assets/Free Island Collection/Environment/Terrain/Terrains/Terrain 1.asset",
+            "Position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "Size": {
+                "x": 2500.0,
+                "y": 650.0,
+                "z": 2500.0
+            },
+            "HeightmapResolution": 2049,
+            "Layers": [
+                "Sand",
+                "Dirt_2",
+                "Mossy_Rock",
+                "Dirt_1",
+                "Grass_1",
+                "Grass_2",
+                "Cliff_1",
+                "Cliff_2"
+            ],
+            "TreeCount": 27099
+        }
+    ],
+    "ExistingFeatures": [
+        {
+            "Number": 1,
+            "Name": "Bay_Shore (39 objects)",
+            "Path": "Island_Environment/Bay_Shore",
+            "Category": "Bay_Shore",
+            "Position": {
+                "x": 1512.762939453125,
+                "y": 44.90814208984375,
+                "z": 1828.0372314453125
+            },
+            "Footprint": {
+                "serializedVersion": "2",
+                "x": 1363.06005859375,
+                "y": 1600.198486328125,
+                "width": 299.40576171875,
+                "height": 455.677490234375
+            },
+            "TopY": 49.19709014892578
+        },
+        {
+            "Number": 2,
+            "Name": "Garden (89 objects)",
+            "Path": "Island_Environment/Garden",
+            "Category": "Garden",
+            "Position": {
+                "x": 456.45501708984377,
+                "y": 106.12321472167969,
+                "z": 1885.6617431640625
+            },
+            "Footprint": {
+                "serializedVersion": "2",
+                "x": 430.773193359375,
+                "y": 1856.56201171875,
+                "width": 51.3636474609375,
+                "height": 58.199462890625
+            },
+            "TopY": 115.41923522949219
+        },
+        {
+            "Number": 3,
+            "Name": "Goju_Approach (25 objects)",
+            "Path": "Island_Environment/Goju_Approach",
+            "Category": "Goju_Approach",
+            "Position": {
+                "x": 989.4705810546875,
+                "y": 220.32382202148438,
+                "z": 1488.2181396484375
+            },
+            "Footprint": {
+                "serializedVersion": "2",
+                "x": 919.20068359375,
+                "y": 1432.977294921875,
+                "width": 140.539794921875,
+                "height": 110.481689453125
+            },
+            "TopY": 231.98318481445313
+        },
+        {
+            "Number": 4,
+            "Name": "KR_Donggung_Court_01",
+            "Path": "Island_Environment/Korean_Buildings/KR_Donggung_Court_01",
+            "Category": "Korean_Buildings",
+            "Position": {
+                "x": 2254.28271484375,
+                "y": 95.48257446289063,
+                "z": 814.28271484375
+            },
+            "Footprint": {
+                "serializedVersion": "2",
+                "x": 2233.453125,
+                "y": 782.16259765625,
+                "width": 41.6591796875,
+                "height": 64.240234375
+            },
+            "TopY": 104.29644775390625
+        },
+        {
+            "Number": 5,
+            "Name": "KR_Donggung_Court_02",
+            "Path": "Island_Environment/Korean_Buildings/KR_Donggung_Court_02",
+            "Category": "Korean_Buildings",
+            "Position": {
+                "x": 575.2855834960938,
+                "y": 142.02711486816407,
+                "z": 1115.28564453125
+            },
+            "Footprint": {
+                "serializedVersion": "2",
+                "x": 538.388671875,
+                "y": 1088.00537109375,
+                "width": 73.01123046875,
+                "height": 62.4169921875
+            },
+            "TopY": 152.67141723632813
+        },
+        {
+            "Number": 6,
+            "Name": "KR_Donggung_Court_03",
+            "Path": "Island_Environment/Korean_Buildings/KR_Donggung_Court_03",
+            "Category": "Korean_Buildings",
+            "Position": {
+                "x": 1788.816650390625,
+                "y": 46.44173812866211,
+                "z": 2016.816650390625
+            },
+            "Footprint": {
+                "serializedVersion": "2",
+                "x": 1755.8671875,
+                "y": 1982.732666015625,
+                "width": 70.7470703125,
+                "height": 72.14599609375
+            },
+            "TopY": 52.46215057373047
+        },
+        {
+            "Number": 7,
+            "Name": "KR_Donggung_Court_04",
+            "Path": "Island_Environment/Korean_Buildings/KR_Donggung_Court_04",
+            "Category": "Korean_Buildings",
+            "Position": {
+                "x": 2119.6611328125,
+                "y": 107.88784790039063,
+                "z": 799.6611938476563
+            },
+            "Footprint": {
+                "serializedVersion": "2",
+                "x": 2084.38623046875,
+                "y": 771.4735107421875,
+                "width": 70.6845703125,
+                "height": 56.6971435546875
+            },
+            "TopY": 114.47636413574219
+        },
+        {
+            "Number": 8,
+            "Name": "KR_Donggung_EastHall",
+            "Path": "Island_Environment/Korean_Buildings/KR_Donggung_EastHall",
+            "Category": "Korean_Buildings",
+            "Position": {
+                "x": 417.0108642578125,
+                "y": 113.71057891845703,
+                "z": 1257.0108642578125
+            },
+            "Footprint": {
+                "serializedVersion": "2",
+                "x": 393.2095947265625,
+                "y": 1232.90087890625,
+                "width": 47.7545166015625,
+                "height": 47.209228515625
+            },
+            "TopY": 124.07856750488281
+        },
+        {
+            "Number": 9,
+            "Name": "KR_Geoncheonggung_Palace",
+            "Path": "Island_Environment/Korean_Buildings/KR_Geoncheonggung_Palace",
+            "Category": "Korean_Buildings",
+            "Position": {
+                "x": 1211.203369140625,
+                "y": 51.52000427246094,
+                "z": 2279.203369140625
+            },
+            "Footprint": {
+                "serializedVersion": "2",
+                "x": 1178.315673828125,
+                "y": 2239.9580078125,
+                "width": 65.775390625,
+                "height": 78.490234375
+            },
+            "TopY": 63.332794189453128
+        },
+        {
+            "Number": 10,
+            "Name": "KR_Gyedong_House",
+            "Path": "Island_Environment/Korean_Buildings/KR_Gyedong_House",
+            "Category": "Korean_Buildings",
+            "Position": {
+                "x": 500.38519287109377,
+                "y": 98.3497543334961,
+                "z": 2000.38525390625
+            },
+            "Footprint": {
+                "serializedVersion": "2",
+                "x": 480.9775390625,
+                "y": 1980.427490234375,
+                "width": 43.62799072265625,
+                "height": 33.6044921875
+            },
+            "TopY": 103.35026550292969
+        },
+        {
+            "Number": 11,
+            "Name": "Pagoda_Goju_Main (site 2)",
+            "Path": "Island_Environment/Landmarks/Pagoda_Goju_Main (site 2)",
+            "Category": "Landmarks",
+            "Position": {
+                "x": 1066.0,
+                "y": 227.19139099121095,
+                "z": 1430.0
+            },
+            "Footprint": {
+                "serializedVersion": "2",
+                "x": 1058.920166015625,
+                "y": 1422.995361328125,
+                "width": 14.0693359375,
+                "height": 14.0751953125
+            },
+            "TopY": 263.3309020996094
+        },
+        {
+            "Number": 12,
+            "Name": "Pagoda_Sanju_South (site 3)",
+            "Path": "Island_Environment/Landmarks/Pagoda_Sanju_South (site 3)",
+            "Category": "Landmarks",
+            "Position": {
+                "x": 1572.0,
+                "y": 191.65809631347657,
+                "z": 602.0
+            },
+            "Footprint": {
+                "serializedVersion": "2",
+                "x": 1568.571533203125,
+                "y": 598.5445556640625,
+                "width": 6.9375,
+                "height": 6.95263671875
+            },
+            "TopY": 206.94979858398438
+        },
+        {
+            "Number": 13,
+            "Name": "Sanju_Shrine (6 objects)",
+            "Path": "Island_Environment/Sanju_Shrine",
+            "Category": "Sanju_Shrine",
+            "Position": {
+                "x": 1581.8336181640625,
+                "y": 190.57156372070313,
+                "z": 588.7049560546875
+            },
+            "Footprint": {
+                "serializedVersion": "2",
+                "x": 1570.3785400390625,
+                "y": 580.6329345703125,
+                "width": 22.91015625,
+                "height": 16.14404296875
+            },
+            "TopY": 203.24734497070313
+        },
+        {
+            "Number": 14,
+            "Name": "PlayerArmature",
+            "Path": "Player_Setup/PlayerArmature",
+            "Category": "Player start (spawn)",
+            "Position": {
+                "x": 917.6429443359375,
+                "y": 225.31214904785157,
+                "z": 1543.83837890625
+            },
+            "Footprint": {
+                "serializedVersion": "2",
+                "x": 917.1546630859375,
+                "y": 1543.27880859375,
+                "width": 0.992919921875,
+                "height": 1.1064453125
+            },
+            "TopY": 227.08203125
+        }
+    ],
+    "SpotHeights": [
+        {
+            "Label": "407 m",
+            "Position": {
+                "x": 1406.55517578125,
+                "y": 407.1922912597656,
+                "z": 1044.61669921875
+            },
+            "Cell": "F6"
+        },
+        {
+            "Label": "286 m",
+            "Position": {
+                "x": 888.97705078125,
+                "y": 285.6719055175781,
+                "z": 1347.35107421875
+            },
+            "Cell": "D5"
+        },
+        {
+            "Label": "181 m",
+            "Position": {
+                "x": 791.32080078125,
+                "y": 180.78533935546876,
+                "z": 1923.52294921875
+            },
+            "Cell": "D3"
+        },
+        {
+            "Label": "157 m",
+            "Position": {
+                "x": 1972.96142578125,
+                "y": 157.0496063232422,
+                "z": 1493.83544921875
+            },
+            "Cell": "H5"
+        },
+        {
+            "Label": "140 m",
+            "Position": {
+                "x": 1172.18017578125,
+                "y": 140.3810272216797,
+                "z": 2040.71044921875
+            },
+            "Cell": "E2"
+        }
+    ],
+    "EnclosedBasinsBelowSeaLevel": [],
+    "TerrainTreeCount": 27099,
+    "FlatOpenGroundDefinition": "slope <= 12 deg, >= 2 m above sea level, no terrain tree in the surrounding 3x3 block of 10 m cells, >= 15 m from existing structure footprints. Geometric only; not a site recommendation.",
+    "Cells": [
+        {
+            "Cell": "A1",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 2250.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 25.08469009399414,
+            "MaxY": 39.40250778198242,
+            "MeanY": 31.587764739990236,
+            "LandFraction": 0.0,
+            "FlatOpenFraction": 0.0,
+            "Trees": 0,
+            "Features": []
+        },
+        {
+            "Cell": "B1",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 250.0,
+                "y": 2250.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 32.25599670410156,
+            "MaxY": 44.317283630371097,
+            "MeanY": 38.036216735839847,
+            "LandFraction": 0.0,
+            "FlatOpenFraction": 0.0,
+            "Trees": 0,
+            "Features": []
+        },
+        {
+            "Cell": "C1",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 500.0,
+                "y": 2250.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 36.69962692260742,
+            "MaxY": 82.73782348632813,
+            "MeanY": 45.309234619140628,
+            "LandFraction": 0.28568708896636965,
+            "FlatOpenFraction": 0.038530636578798297,
+            "Trees": 35,
+            "Features": []
+        },
+        {
+            "Cell": "D1",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 750.0,
+                "y": 2250.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 40.944881439208987,
+            "MaxY": 90.60344696044922,
+            "MeanY": 52.47565841674805,
+            "LandFraction": 0.556643545627594,
+            "FlatOpenFraction": 0.07304611057043076,
+            "Trees": 220,
+            "Features": []
+        },
+        {
+            "Cell": "E1",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1000.0,
+                "y": 2250.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 40.98455810546875,
+            "MaxY": 62.20090866088867,
+            "MeanY": 47.35118865966797,
+            "LandFraction": 0.576597273349762,
+            "FlatOpenFraction": 0.24769780039787293,
+            "Trees": 25,
+            "Features": [
+                "9 KR_Geoncheonggung_Palace"
+            ]
+        },
+        {
+            "Cell": "F1",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1250.0,
+                "y": 2250.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 40.76634216308594,
+            "MaxY": 68.58863067626953,
+            "MeanY": 45.593536376953128,
+            "LandFraction": 0.4023854732513428,
+            "FlatOpenFraction": 0.13679952919483186,
+            "Trees": 64,
+            "Features": []
+        },
+        {
+            "Cell": "G1",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1500.0,
+                "y": 2250.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 36.74922180175781,
+            "MaxY": 69.0548095703125,
+            "MeanY": 43.071170806884769,
+            "LandFraction": 0.18535397946834565,
+            "FlatOpenFraction": 0.011649160645902157,
+            "Trees": 116,
+            "Features": []
+        },
+        {
+            "Cell": "H1",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1750.0,
+                "y": 2250.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 32.2708740234375,
+            "MaxY": 41.247406005859378,
+            "MeanY": 36.46207046508789,
+            "LandFraction": 0.0,
+            "FlatOpenFraction": 0.0,
+            "Trees": 0,
+            "Features": []
+        },
+        {
+            "Cell": "I1",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 2000.0,
+                "y": 2250.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 29.736618041992189,
+            "MaxY": 38.66355514526367,
+            "MeanY": 33.28366470336914,
+            "LandFraction": 0.0,
+            "FlatOpenFraction": 0.0,
+            "Trees": 0,
+            "Features": []
+        },
+        {
+            "Cell": "J1",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 2250.0,
+                "y": 2250.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 26.805606842041017,
+            "MaxY": 38.83713150024414,
+            "MeanY": 31.529762268066408,
+            "LandFraction": 0.0,
+            "FlatOpenFraction": 0.0,
+            "Trees": 0,
+            "Features": []
+        },
+        {
+            "Cell": "A2",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 2000.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 31.23931884765625,
+            "MaxY": 60.718048095703128,
+            "MeanY": 38.87915802001953,
+            "LandFraction": 0.06279152631759644,
+            "FlatOpenFraction": 0.015470892190933228,
+            "Trees": 0,
+            "Features": []
+        },
+        {
+            "Cell": "B2",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 250.0,
+                "y": 2000.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 39.40250778198242,
+            "MaxY": 110.53530883789063,
+            "MeanY": 63.21791076660156,
+            "LandFraction": 0.7188448905944824,
+            "FlatOpenFraction": 0.0214360561221838,
+            "Trees": 294,
+            "Features": []
+        },
+        {
+            "Cell": "C2",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 500.0,
+                "y": 2000.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 44.317283630371097,
+            "MaxY": 152.97793579101563,
+            "MeanY": 98.54877471923828,
+            "LandFraction": 0.9990149140357971,
+            "FlatOpenFraction": 0.058821436017751697,
+            "Trees": 547,
+            "Features": [
+                "10 KR_Gyedong_House"
+            ]
+        },
+        {
+            "Cell": "D2",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 750.0,
+                "y": 2000.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 62.20090866088867,
+            "MaxY": 162.34129333496095,
+            "MeanY": 109.57056427001953,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.01691323146224022,
+            "Trees": 753,
+            "Features": []
+        },
+        {
+            "Cell": "E2",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1000.0,
+                "y": 2000.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 51.07199478149414,
+            "MaxY": 141.46714782714845,
+            "MeanY": 93.43974304199219,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.056584179401397708,
+            "Trees": 135,
+            "Features": []
+        },
+        {
+            "Cell": "F2",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1250.0,
+                "y": 2000.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 42.52197265625,
+            "MaxY": 122.93879699707031,
+            "MeanY": 76.25785827636719,
+            "LandFraction": 0.9444958567619324,
+            "FlatOpenFraction": 0.012907246127724648,
+            "Trees": 508,
+            "Features": []
+        },
+        {
+            "Cell": "G2",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1500.0,
+                "y": 2000.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 41.247406005859378,
+            "MaxY": 71.73289489746094,
+            "MeanY": 45.77021026611328,
+            "LandFraction": 0.31627801060676577,
+            "FlatOpenFraction": 0.03522948548197746,
+            "Trees": 160,
+            "Features": []
+        },
+        {
+            "Cell": "H2",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1750.0,
+                "y": 2000.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 36.28799819946289,
+            "MaxY": 48.428627014160159,
+            "MeanY": 41.704322814941409,
+            "LandFraction": 0.14714853465557099,
+            "FlatOpenFraction": 0.012474036775529385,
+            "Trees": 0,
+            "Features": [
+                "6 KR_Donggung_Court_03"
+            ]
+        },
+        {
+            "Cell": "I2",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 2000.0,
+                "y": 2000.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 35.66311264038086,
+            "MaxY": 41.966522216796878,
+            "MeanY": 39.38737487792969,
+            "LandFraction": 0.0,
+            "FlatOpenFraction": 0.0,
+            "Trees": 0,
+            "Features": []
+        },
+        {
+            "Cell": "J2",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 2250.0,
+                "y": 2000.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 32.513885498046878,
+            "MaxY": 40.70682907104492,
+            "MeanY": 37.43130874633789,
+            "LandFraction": 0.0,
+            "FlatOpenFraction": 0.0,
+            "Trees": 0,
+            "Features": []
+        },
+        {
+            "Cell": "A3",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 1750.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 37.329471588134769,
+            "MaxY": 66.37177276611328,
+            "MeanY": 42.560054779052737,
+            "LandFraction": 0.21068412065505982,
+            "FlatOpenFraction": 0.026853064075112344,
+            "Trees": 0,
+            "Features": []
+        },
+        {
+            "Cell": "B3",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 250.0,
+                "y": 1750.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 50.17930221557617,
+            "MaxY": 141.66552734375,
+            "MeanY": 98.8423080444336,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.0002611120871733874,
+            "Trees": 617,
+            "Features": [
+                "2 Garden (89 objects)"
+            ]
+        },
+        {
+            "Cell": "C3",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 500.0,
+                "y": 1750.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 98.33516693115235,
+            "MaxY": 176.5004119873047,
+            "MeanY": 134.32362365722657,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.10257584601640701,
+            "Trees": 451,
+            "Features": []
+        },
+        {
+            "Cell": "D3",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 750.0,
+                "y": 1750.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 122.41806030273438,
+            "MaxY": 181.2366485595703,
+            "MeanY": 152.30812072753907,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.007524775806814432,
+            "Trees": 697,
+            "Features": []
+        },
+        {
+            "Cell": "E3",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1000.0,
+                "y": 1750.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 71.56427001953125,
+            "MaxY": 137.46490478515626,
+            "MeanY": 100.07723236083985,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.01649613305926323,
+            "Trees": 644,
+            "Features": []
+        },
+        {
+            "Cell": "F3",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1250.0,
+                "y": 1750.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 42.47734069824219,
+            "MaxY": 111.71564483642578,
+            "MeanY": 63.55958557128906,
+            "LandFraction": 0.8585425615310669,
+            "FlatOpenFraction": 0.018381915986537935,
+            "Trees": 239,
+            "Features": []
+        },
+        {
+            "Cell": "G3",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1500.0,
+                "y": 1750.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 41.30195999145508,
+            "MaxY": 92.12598419189453,
+            "MeanY": 46.84895324707031,
+            "LandFraction": 0.4894961714744568,
+            "FlatOpenFraction": 0.05234704166650772,
+            "Trees": 26,
+            "Features": [
+                "1 Bay_Shore (39 objects)"
+            ]
+        },
+        {
+            "Cell": "H3",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1750.0,
+                "y": 1750.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 41.966522216796878,
+            "MaxY": 98.36491394042969,
+            "MeanY": 63.0868034362793,
+            "LandFraction": 0.9420464038848877,
+            "FlatOpenFraction": 0.2533611059188843,
+            "Trees": 297,
+            "Features": []
+        },
+        {
+            "Cell": "I3",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 2000.0,
+                "y": 1750.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 40.66715621948242,
+            "MaxY": 64.85418701171875,
+            "MeanY": 44.07735824584961,
+            "LandFraction": 0.25675034523010256,
+            "FlatOpenFraction": 0.08870690315961838,
+            "Trees": 31,
+            "Features": []
+        },
+        {
+            "Cell": "J3",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 2250.0,
+                "y": 1750.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 34.800174713134769,
+            "MaxY": 42.472381591796878,
+            "MeanY": 38.54590606689453,
+            "LandFraction": 0.0,
+            "FlatOpenFraction": 0.0,
+            "Trees": 0,
+            "Features": []
+        },
+        {
+            "Cell": "A4",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 1500.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 37.29971694946289,
+            "MaxY": 67.65625762939453,
+            "MeanY": 42.77944564819336,
+            "LandFraction": 0.20801733434200288,
+            "FlatOpenFraction": 0.01537000760436058,
+            "Trees": 0,
+            "Features": []
+        },
+        {
+            "Cell": "B4",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 250.0,
+                "y": 1500.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 51.3348388671875,
+            "MaxY": 164.4093780517578,
+            "MeanY": 109.16962432861328,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.004943138919770718,
+            "Trees": 450,
+            "Features": []
+        },
+        {
+            "Cell": "C4",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 500.0,
+                "y": 1500.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 141.66552734375,
+            "MaxY": 228.92137145996095,
+            "MeanY": 181.02333068847657,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.022242004051804544,
+            "Trees": 568,
+            "Features": []
+        },
+        {
+            "Cell": "D4",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 750.0,
+                "y": 1500.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 125.19532012939453,
+            "MaxY": 269.06280517578127,
+            "MeanY": 202.10740661621095,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.0014207825297489763,
+            "Trees": 292,
+            "Features": [
+                "14 PlayerArmature"
+            ]
+        },
+        {
+            "Cell": "E4",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1000.0,
+                "y": 1500.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 68.75228881835938,
+            "MaxY": 214.142333984375,
+            "MeanY": 123.3239517211914,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.0007358613656833768,
+            "Trees": 842,
+            "Features": []
+        },
+        {
+            "Cell": "F4",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1250.0,
+                "y": 1500.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 45.983642578125,
+            "MaxY": 123.97035217285156,
+            "MeanY": 68.42976379394531,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.006349771749228239,
+            "Trees": 388,
+            "Features": []
+        },
+        {
+            "Cell": "G4",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1500.0,
+                "y": 1500.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 46.588687896728519,
+            "MaxY": 141.3729248046875,
+            "MeanY": 88.2552490234375,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.0,
+            "Trees": 745,
+            "Features": []
+        },
+        {
+            "Cell": "H4",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1750.0,
+                "y": 1500.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 64.85418701171875,
+            "MaxY": 155.750244140625,
+            "MeanY": 111.66524505615235,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.018972167745232583,
+            "Trees": 804,
+            "Features": []
+        },
+        {
+            "Cell": "I4",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 2000.0,
+                "y": 1500.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 42.452545166015628,
+            "MaxY": 149.65512084960938,
+            "MeanY": 71.69332122802735,
+            "LandFraction": 0.8944417834281921,
+            "FlatOpenFraction": 0.07835023105144501,
+            "Trees": 205,
+            "Features": []
+        },
+        {
+            "Cell": "J4",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 2250.0,
+                "y": 1500.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 35.65814971923828,
+            "MaxY": 43.36011505126953,
+            "MeanY": 40.12879943847656,
+            "LandFraction": 0.0,
+            "FlatOpenFraction": 0.0,
+            "Trees": 0,
+            "Features": []
+        },
+        {
+            "Cell": "A5",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 1250.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 39.427303314208987,
+            "MaxY": 90.1571044921875,
+            "MeanY": 47.44029998779297,
+            "LandFraction": 0.36714455485343935,
+            "FlatOpenFraction": 0.046662699431180957,
+            "Trees": 108,
+            "Features": []
+        },
+        {
+            "Cell": "B5",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 250.0,
+                "y": 1250.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 56.52734375,
+            "MaxY": 157.00001525878907,
+            "MeanY": 110.52235412597656,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.00030858704121783376,
+            "Trees": 639,
+            "Features": [
+                "8 KR_Donggung_EastHall"
+            ]
+        },
+        {
+            "Cell": "C5",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 500.0,
+                "y": 1250.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 129.21739196777345,
+            "MaxY": 232.24417114257813,
+            "MeanY": 178.5181121826172,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.00925044622272253,
+            "Trees": 685,
+            "Features": []
+        },
+        {
+            "Cell": "D5",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 750.0,
+                "y": 1250.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 206.21719360351563,
+            "MaxY": 286.5497131347656,
+            "MeanY": 250.76907348632813,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.023209305480122567,
+            "Trees": 222,
+            "Features": [
+                "3 Goju_Approach (25 objects)"
+            ]
+        },
+        {
+            "Cell": "E5",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1000.0,
+                "y": 1250.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 116.64034271240235,
+            "MaxY": 289.5650329589844,
+            "MeanY": 214.29600524902345,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.00695419404655695,
+            "Trees": 153,
+            "Features": [
+                "11 Pagoda_Goju_Main (site 2)"
+            ]
+        },
+        {
+            "Cell": "F5",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1250.0,
+                "y": 1250.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 82.5543212890625,
+            "MaxY": 302.45947265625,
+            "MeanY": 176.41073608398438,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.00397382490336895,
+            "Trees": 131,
+            "Features": []
+        },
+        {
+            "Cell": "G5",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1500.0,
+                "y": 1250.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 112.15702819824219,
+            "MaxY": 244.8013916015625,
+            "MeanY": 160.4511260986328,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.009845113381743431,
+            "Trees": 597,
+            "Features": []
+        },
+        {
+            "Cell": "H5",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1750.0,
+                "y": 1250.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 98.6128921508789,
+            "MaxY": 157.11904907226563,
+            "MeanY": 129.75193786621095,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.0,
+            "Trees": 905,
+            "Features": []
+        },
+        {
+            "Cell": "I5",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 2000.0,
+                "y": 1250.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 41.887168884277347,
+            "MaxY": 149.5410614013672,
+            "MeanY": 69.81686401367188,
+            "LandFraction": 0.8269420266151428,
+            "FlatOpenFraction": 0.08114058524370194,
+            "Trees": 431,
+            "Features": []
+        },
+        {
+            "Cell": "J5",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 2250.0,
+                "y": 1250.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 38.88176727294922,
+            "MaxY": 47.65000534057617,
+            "MeanY": 40.625274658203128,
+            "LandFraction": 0.004414039198309183,
+            "FlatOpenFraction": 0.0002439024392515421,
+            "Trees": 0,
+            "Features": []
+        },
+        {
+            "Cell": "A6",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 1000.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 39.56120681762695,
+            "MaxY": 95.24049377441406,
+            "MeanY": 48.33840560913086,
+            "LandFraction": 0.381802499294281,
+            "FlatOpenFraction": 0.03535395488142967,
+            "Trees": 199,
+            "Features": []
+        },
+        {
+            "Cell": "B6",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 250.0,
+                "y": 1000.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 44.94216537475586,
+            "MaxY": 143.59970092773438,
+            "MeanY": 103.98887634277344,
+            "LandFraction": 0.9999821782112122,
+            "FlatOpenFraction": 0.00779775669798255,
+            "Trees": 566,
+            "Features": []
+        },
+        {
+            "Cell": "C6",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 500.0,
+                "y": 1000.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 128.2007293701172,
+            "MaxY": 206.713134765625,
+            "MeanY": 155.37403869628907,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.05061867833137512,
+            "Trees": 482,
+            "Features": [
+                "5 KR_Donggung_Court_02"
+            ]
+        },
+        {
+            "Cell": "D6",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 750.0,
+                "y": 1000.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 151.46034240722657,
+            "MaxY": 276.7350158691406,
+            "MeanY": 219.81004333496095,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.0031155420001596214,
+            "Trees": 326,
+            "Features": []
+        },
+        {
+            "Cell": "E6",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1000.0,
+                "y": 1000.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 216.76087951660157,
+            "MaxY": 313.8810119628906,
+            "MeanY": 260.6626892089844,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.011326591484248639,
+            "Trees": 322,
+            "Features": []
+        },
+        {
+            "Cell": "F6",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1250.0,
+                "y": 1000.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 245.12374877929688,
+            "MaxY": 408.13458251953127,
+            "MeanY": 339.9447937011719,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.008768590167164803,
+            "Trees": 47,
+            "Features": []
+        },
+        {
+            "Cell": "G6",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1500.0,
+                "y": 1000.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 148.25161743164063,
+            "MaxY": 342.54638671875,
+            "MeanY": 235.1909637451172,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.017037564888596536,
+            "Trees": 132,
+            "Features": []
+        },
+        {
+            "Cell": "H6",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1750.0,
+                "y": 1000.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 101.73236083984375,
+            "MaxY": 271.00689697265627,
+            "MeanY": 172.2382354736328,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.0014812611043453217,
+            "Trees": 342,
+            "Features": []
+        },
+        {
+            "Cell": "I6",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 2000.0,
+                "y": 1000.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 47.3028450012207,
+            "MaxY": 164.13165283203126,
+            "MeanY": 90.28388214111328,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.10539434105157852,
+            "Trees": 624,
+            "Features": []
+        },
+        {
+            "Cell": "J6",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 2250.0,
+                "y": 1000.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 40.21584701538086,
+            "MaxY": 78.63639068603516,
+            "MeanY": 44.250125885009769,
+            "LandFraction": 0.23979774117469788,
+            "FlatOpenFraction": 0.064152292907238,
+            "Trees": 1,
+            "Features": []
+        },
+        {
+            "Cell": "A7",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 750.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 36.46653366088867,
+            "MaxY": 44.94216537475586,
+            "MeanY": 39.64426040649414,
+            "LandFraction": 0.0,
+            "FlatOpenFraction": 0.0,
+            "Trees": 0,
+            "Features": []
+        },
+        {
+            "Cell": "B7",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 250.0,
+                "y": 750.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 40.642356872558597,
+            "MaxY": 136.8846435546875,
+            "MeanY": 56.28478240966797,
+            "LandFraction": 0.567099392414093,
+            "FlatOpenFraction": 0.024567697197198869,
+            "Trees": 73,
+            "Features": []
+        },
+        {
+            "Cell": "C7",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 500.0,
+                "y": 750.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 74.753173828125,
+            "MaxY": 169.11585998535157,
+            "MeanY": 116.2999496459961,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.02788558602333069,
+            "Trees": 468,
+            "Features": []
+        },
+        {
+            "Cell": "D7",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 750.0,
+                "y": 750.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 95.82073974609375,
+            "MaxY": 217.13284301757813,
+            "MeanY": 154.1016082763672,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.011200501583516598,
+            "Trees": 496,
+            "Features": []
+        },
+        {
+            "Cell": "E7",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1000.0,
+                "y": 750.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 142.03250122070313,
+            "MaxY": 282.79541015625,
+            "MeanY": 214.85031127929688,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.0013055604649707676,
+            "Trees": 279,
+            "Features": []
+        },
+        {
+            "Cell": "F7",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1250.0,
+                "y": 750.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 189.97512817382813,
+            "MaxY": 387.0025329589844,
+            "MeanY": 274.189453125,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.0006646490073762834,
+            "Trees": 102,
+            "Features": []
+        },
+        {
+            "Cell": "G7",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1500.0,
+                "y": 750.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 188.29388427734376,
+            "MaxY": 345.01123046875,
+            "MeanY": 290.7546081542969,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.008435895666480065,
+            "Trees": 67,
+            "Features": []
+        },
+        {
+            "Cell": "H7",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1750.0,
+                "y": 750.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 133.32875061035157,
+            "MaxY": 275.69354248046877,
+            "MeanY": 199.5975799560547,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.00504421116784215,
+            "Trees": 227,
+            "Features": []
+        },
+        {
+            "Cell": "I7",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 2000.0,
+                "y": 750.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 75.7400894165039,
+            "MaxY": 150.1808319091797,
+            "MeanY": 105.3570785522461,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.09844246506690979,
+            "Trees": 592,
+            "Features": [
+                "7 KR_Donggung_Court_04"
+            ]
+        },
+        {
+            "Cell": "J7",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 2250.0,
+                "y": 750.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 41.044071197509769,
+            "MaxY": 101.18682098388672,
+            "MeanY": 62.56011962890625,
+            "LandFraction": 0.7307993769645691,
+            "FlatOpenFraction": 0.09462939947843552,
+            "Trees": 96,
+            "Features": [
+                "4 KR_Donggung_Court_01"
+            ]
+        },
+        {
+            "Cell": "A8",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 500.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 27.703258514404298,
+            "MaxY": 40.97959899902344,
+            "MeanY": 36.67567825317383,
+            "LandFraction": 0.0,
+            "FlatOpenFraction": 0.0,
+            "Trees": 0,
+            "Features": []
+        },
+        {
+            "Cell": "B8",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 250.0,
+                "y": 500.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 36.99223327636719,
+            "MaxY": 86.47225952148438,
+            "MeanY": 47.364768981933597,
+            "LandFraction": 0.32950568199157717,
+            "FlatOpenFraction": 0.023363597691059114,
+            "Trees": 45,
+            "Features": []
+        },
+        {
+            "Cell": "C8",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 500.0,
+                "y": 500.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 41.51025390625,
+            "MaxY": 107.97625732421875,
+            "MeanY": 65.68295288085938,
+            "LandFraction": 0.9237537384033203,
+            "FlatOpenFraction": 0.11392028629779816,
+            "Trees": 505,
+            "Features": []
+        },
+        {
+            "Cell": "D8",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 750.0,
+                "y": 500.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 79.21167755126953,
+            "MaxY": 142.03250122070313,
+            "MeanY": 109.05593872070313,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.004432971123605967,
+            "Trees": 1057,
+            "Features": []
+        },
+        {
+            "Cell": "E8",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1000.0,
+                "y": 500.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 96.83245849609375,
+            "MaxY": 189.93545532226563,
+            "MeanY": 130.65440368652345,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.01145151723176241,
+            "Trees": 934,
+            "Features": []
+        },
+        {
+            "Cell": "F8",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1250.0,
+                "y": 500.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 107.00917053222656,
+            "MaxY": 218.13465881347657,
+            "MeanY": 155.34539794921876,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.018923260271549226,
+            "Trees": 449,
+            "Features": []
+        },
+        {
+            "Cell": "G8",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1500.0,
+                "y": 500.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 149.6650390625,
+            "MaxY": 230.57781982421876,
+            "MeanY": 187.62881469726563,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.005340929143130779,
+            "Trees": 467,
+            "Features": [
+                "12 Pagoda_Sanju_South (site 3)",
+                "13 Sanju_Shrine (6 objects)"
+            ]
+        },
+        {
+            "Cell": "H8",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1750.0,
+                "y": 500.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 105.97264862060547,
+            "MaxY": 188.29388427734376,
+            "MeanY": 145.6998291015625,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.00010113028110936284,
+            "Trees": 650,
+            "Features": []
+        },
+        {
+            "Cell": "I8",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 2000.0,
+                "y": 500.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 46.37047576904297,
+            "MaxY": 133.809814453125,
+            "MeanY": 87.18216705322266,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.14098866283893586,
+            "Trees": 552,
+            "Features": []
+        },
+        {
+            "Cell": "J8",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 2250.0,
+                "y": 500.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 38.04362869262695,
+            "MaxY": 94.33788299560547,
+            "MeanY": 47.09270477294922,
+            "LandFraction": 0.3411243259906769,
+            "FlatOpenFraction": 0.04816180840134621,
+            "Trees": 104,
+            "Features": []
+        },
+        {
+            "Cell": "A9",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 250.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 20.35341453552246,
+            "MaxY": 36.99223327636719,
+            "MeanY": 27.738679885864259,
+            "LandFraction": 0.0,
+            "FlatOpenFraction": 0.0,
+            "Trees": 0,
+            "Features": []
+        },
+        {
+            "Cell": "B9",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 250.0,
+                "y": 250.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 30.783052444458009,
+            "MaxY": 41.51025390625,
+            "MeanY": 37.7850456237793,
+            "LandFraction": 0.0,
+            "FlatOpenFraction": 0.0,
+            "Trees": 0,
+            "Features": []
+        },
+        {
+            "Cell": "C9",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 500.0,
+                "y": 250.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 37.121177673339847,
+            "MaxY": 79.21167755126953,
+            "MeanY": 44.24476623535156,
+            "LandFraction": 0.26314759254455569,
+            "FlatOpenFraction": 0.03953474387526512,
+            "Trees": 34,
+            "Features": []
+        },
+        {
+            "Cell": "D9",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 750.0,
+                "y": 250.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 43.7469482421875,
+            "MaxY": 103.81034851074219,
+            "MeanY": 71.41625213623047,
+            "LandFraction": 0.9911319613456726,
+            "FlatOpenFraction": 0.08469047397375107,
+            "Trees": 416,
+            "Features": []
+        },
+        {
+            "Cell": "E9",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1000.0,
+                "y": 250.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 42.145057678222659,
+            "MaxY": 115.03349304199219,
+            "MeanY": 70.10881042480469,
+            "LandFraction": 0.8835143446922302,
+            "FlatOpenFraction": 0.03227108344435692,
+            "Trees": 608,
+            "Features": []
+        },
+        {
+            "Cell": "F9",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1250.0,
+                "y": 250.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 48.01204299926758,
+            "MaxY": 156.53878784179688,
+            "MeanY": 99.59391021728516,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.013257373124361039,
+            "Trees": 818,
+            "Features": []
+        },
+        {
+            "Cell": "G9",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1500.0,
+                "y": 250.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 64.47727966308594,
+            "MaxY": 201.85292053222657,
+            "MeanY": 130.83641052246095,
+            "LandFraction": 1.0,
+            "FlatOpenFraction": 0.013485593721270562,
+            "Trees": 159,
+            "Features": []
+        },
+        {
+            "Cell": "H9",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1750.0,
+                "y": 250.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 42.7897834777832,
+            "MaxY": 189.22625732421876,
+            "MeanY": 105.28986358642578,
+            "LandFraction": 0.9801732897758484,
+            "FlatOpenFraction": 0.00768500380218029,
+            "Trees": 525,
+            "Features": []
+        },
+        {
+            "Cell": "I9",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 2000.0,
+                "y": 250.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 36.22352600097656,
+            "MaxY": 114.02177429199219,
+            "MeanY": 62.77194595336914,
+            "LandFraction": 0.6882151961326599,
+            "FlatOpenFraction": 0.06067333370447159,
+            "Trees": 119,
+            "Features": []
+        },
+        {
+            "Cell": "J9",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 2250.0,
+                "y": 250.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 29.230758666992189,
+            "MaxY": 47.01519775390625,
+            "MeanY": 38.05325698852539,
+            "LandFraction": 0.010913298465311528,
+            "FlatOpenFraction": 0.0,
+            "Trees": 0,
+            "Features": []
+        },
+        {
+            "Cell": "A10",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 17.521591186523439,
+            "MaxY": 30.783052444458009,
+            "MeanY": 22.429244995117189,
+            "LandFraction": 0.0,
+            "FlatOpenFraction": 0.0,
+            "Trees": 0,
+            "Features": []
+        },
+        {
+            "Cell": "B10",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 250.0,
+                "y": 0.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 24.018417358398439,
+            "MaxY": 37.121177673339847,
+            "MeanY": 30.364269256591798,
+            "LandFraction": 0.0,
+            "FlatOpenFraction": 0.0,
+            "Trees": 0,
+            "Features": []
+        },
+        {
+            "Cell": "C10",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 500.0,
+                "y": 0.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 28.467008590698243,
+            "MaxY": 43.7469482421875,
+            "MeanY": 35.579681396484378,
+            "LandFraction": 0.0,
+            "FlatOpenFraction": 0.0,
+            "Trees": 0,
+            "Features": []
+        },
+        {
+            "Cell": "D10",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 750.0,
+                "y": 0.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 33.83804702758789,
+            "MaxY": 50.50166320800781,
+            "MeanY": 40.437435150146487,
+            "LandFraction": 0.06386564671993256,
+            "FlatOpenFraction": 0.018147291615605356,
+            "Trees": 0,
+            "Features": []
+        },
+        {
+            "Cell": "E10",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1000.0,
+                "y": 0.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 38.7131462097168,
+            "MaxY": 49.20229721069336,
+            "MeanY": 41.165035247802737,
+            "LandFraction": 0.0317370630800724,
+            "FlatOpenFraction": 0.005002974532544613,
+            "Trees": 0,
+            "Features": []
+        },
+        {
+            "Cell": "F10",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1250.0,
+                "y": 0.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 39.427303314208987,
+            "MaxY": 105.47671508789063,
+            "MeanY": 49.95646667480469,
+            "LandFraction": 0.3912314176559448,
+            "FlatOpenFraction": 0.028179654851555826,
+            "Trees": 93,
+            "Features": []
+        },
+        {
+            "Cell": "G10",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1500.0,
+                "y": 0.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 39.680233001708987,
+            "MaxY": 90.54888916015625,
+            "MeanY": 46.11540603637695,
+            "LandFraction": 0.3525903522968292,
+            "FlatOpenFraction": 0.055883925408124927,
+            "Trees": 28,
+            "Features": []
+        },
+        {
+            "Cell": "H10",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 1750.0,
+                "y": 0.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 34.547245025634769,
+            "MaxY": 71.96102905273438,
+            "MeanY": 42.56216812133789,
+            "LandFraction": 0.1692088097333908,
+            "FlatOpenFraction": 0.010553241707384587,
+            "Trees": 71,
+            "Features": []
+        },
+        {
+            "Cell": "I10",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 2000.0,
+                "y": 0.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 24.196956634521486,
+            "MaxY": 42.7897834777832,
+            "MeanY": 33.60287094116211,
+            "LandFraction": 0.0,
+            "FlatOpenFraction": 0.0,
+            "Trees": 0,
+            "Features": []
+        },
+        {
+            "Cell": "J10",
+            "WorldXZ": {
+                "serializedVersion": "2",
+                "x": 2250.0,
+                "y": 0.0,
+                "width": 250.0,
+                "height": 250.0
+            },
+            "MinY": 19.723569869995118,
+            "MaxY": 36.22352600097656,
+            "MeanY": 25.687986373901368,
+            "LandFraction": 0.0,
+            "FlatOpenFraction": 0.0,
+            "Trees": 0,
+            "Features": []
+        }
+    ],
+    "Notes": [
+        "No road or path objects; trails exist only if painted into the terrain texture.",
+        "No river or lake objects. Only the ocean plane at sea level.",
+        "No enclosed basins below sea level (no inland water)."
+    ]
+}
